@@ -31,6 +31,8 @@ cd personal-website && python3 -m http.server 8765
 2. **链接**：把 `href=""` 填上网址。`href` 为空的按钮会自动显示成灰色的 “Soon”，填了就自动变成可点击（外链会在新标签页打开）。
 3. **状态**：把 `In development` 改成 `Live`，并把 `badge-dev` 改成 `badge-live`（绿色）。
 
+ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/README.md` 的 Results 表。评测集扩大（比如加了真人录音或新项目）后，记得同步更新这里的数字和下面那句说明。
+
 ## JSS 论文上线后
 
 在 Publications 部分找到 `DOI` 按钮，把 `href=""` 填成 `https://doi.org/...`。如果最终作者列表确定了，也可以把 `Ben Cheng et al.` 换成完整作者。
@@ -52,7 +54,7 @@ cd personal-website && python3 -m http.server 8765
    ```
 3. 仓库 Settings → Pages → Source 选 `main` 分支，几分钟后网址就是 `https://你的用户名.github.io`。
 
-改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=6`、`main.js?v=6` 的数字加 1，避免访客浏览器用旧缓存。
+改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=7`、`main.js?v=7` 的数字加 1，避免访客浏览器用旧缓存。
 
 ## 加回 CV 下载
 

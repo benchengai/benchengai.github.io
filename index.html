@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ben Cheng — AI Engineer &amp; Researcher</title>
-  <meta name="description" content="Ben Cheng builds LLM applications, speech pipelines and multimodal emotion recognition systems. PhD researcher at Deakin University, Melbourne; publications in the Journal of Systems and Software, APSEC and IEEE RE.">
+  <title>Ben Cheng — AI Engineer · LLM Systems</title>
+  <meta name="description" content="Ben Cheng is an AI engineer in Melbourne building LLM applications end to end: structured extraction, RAG, evaluation against gold labels, LoRA fine-tuning and local speech-to-text. PhD candidate (Deakin); published in JSS, APSEC and IEEE RE.">
   <meta name="author" content="Ben Cheng">
   <link rel="canonical" href="https://benchengai.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://benchengai.github.io/">
-  <meta property="og:title" content="Ben Cheng — AI Engineer &amp; Researcher">
-  <meta property="og:description" content="LLM applications, speech AI and human-centred software engineering. PhD researcher at Deakin University, Melbourne.">
+  <meta property="og:title" content="Ben Cheng — AI Engineer · LLM Systems">
+  <meta property="og:description" content="LLM pipelines from raw speech to verified, structured output: extraction, RAG, evals and LoRA fine-tuning. Melbourne, open to AI / LLM engineering roles.">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#07090d" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=6">
+  <link rel="stylesheet" href="assets/css/style.css?v=7">
 
   <script>
     (function () {
@@ -36,11 +36,11 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Ben Cheng",
-    "jobTitle": "AI Engineer & PhD Researcher",
+    "jobTitle": "AI Engineer",
     "email": "mailto:bencheng4ai@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
     "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Deakin University" }, { "@type": "CollegeOrUniversity", "name": "Southwest University" }],
-    "knowsAbout": ["Large language models", "Retrieval-augmented generation", "LoRA fine-tuning", "Speech recognition", "Multimodal emotion recognition", "Requirements engineering"],
+    "knowsAbout": ["Large language models", "LLM evaluation", "Structured output", "Retrieval-augmented generation", "LoRA fine-tuning", "Speech recognition", "Multimodal emotion recognition"],
     "knowsLanguage": ["English", "Mandarin", "Cantonese"],
     "sameAs": ["https://orcid.org/0009-0005-3994-517X"]
   }
@@ -87,11 +87,11 @@
         <span class="brand-name">Ben Cheng</span>
       </a>
       <nav class="nav-links" id="nav-links" aria-label="Primary">
+        <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="#demos">Demos</a>
-        <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#publications">Publications</a>
         <a class="btn btn-sm btn-primary nav-cv-mobile" href="mailto:bencheng4ai@gmail.com">
           <svg class="i"><use href="#i-mail"/></svg>Email me
         </a>
@@ -127,23 +127,23 @@
             <svg class="i"><use href="#i-arrow"/></svg>
           </a>
 
-          <p class="kicker reveal">PhD in Information Technology · Deakin University</p>
+          <p class="kicker reveal">AI Engineer · LLM &amp; Speech Systems</p>
           <h1 class="hero-name reveal">Ben Cheng</h1>
           <p class="hero-role reveal">
-            I build <span class="serif grad-text">LLM systems that listen</span> — turning how people actually speak into data and software you can trust.
+            I build <span class="serif grad-text">LLM systems that listen</span>, taking raw human speech all the way to structured, verified output.
           </p>
           <p class="hero-sub reveal">
-            Speech pipelines, RAG and privacy-preserving edge–cloud models, grounded in research on emotion and human factors in software engineering.
+            Structured extraction with Claude, GPT and Gemini, RAG, LoRA fine-tuning and local speech-to-text, each shipped with an evaluation set. Deakin University PhD (thesis submitted), published in JSS, APSEC and IEEE RE.
           </p>
 
           <div class="hero-cta reveal">
-            <a class="btn btn-primary" href="#demos">See my demos<svg class="i"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-primary" href="#projects">See my projects<svg class="i"><use href="#i-arrow"/></svg></a>
             <a class="btn btn-outline" href="mailto:bencheng4ai@gmail.com"><svg class="i"><use href="#i-mail"/></svg>Email me</a>
-            <a class="btn btn-ghost" href="#publications"><svg class="i"><use href="#i-book"/></svg>Publications</a>
+            <a class="btn btn-ghost" href="#skills"><svg class="i"><use href="#i-code"/></svg>Tech stack</a>
           </div>
 
           <p class="hero-status reveal">
-            <span class="status-item"><span class="status-dot"></span><span>Open to AI / LLM engineering and applied research roles</span></span>
+            <span class="status-item"><span class="status-dot"></span><span>Open to AI Engineer and LLM Engineer roles</span></span>
             <span class="status-item"><svg class="i"><use href="#i-pin"/></svg><span>Melbourne, Australia</span></span>
           </p>
         </div>
@@ -183,87 +183,30 @@
       <div class="container">
         <dl class="stats reveal" data-stagger>
           <div class="stat">
+            <dt>On-device LLM accuracy</dt>
+            <dd><span data-count="87.9" data-decimals="1">87.9</span><small>%</small></dd>
+            <p>LoRA-tuned, Edge4RE (APSEC 2025)</p>
+          </div>
+          <div class="stat">
+            <dt>Labelled training utterances</dt>
+            <dd><span data-count="1362">1,362</span></dd>
+            <p>speech dataset I built, rationale per label</p>
+          </div>
+          <div class="stat">
+            <dt>LLM products in build</dt>
+            <dd><span data-count="5">5</span></dd>
+            <p>flagship pipeline runs end to end</p>
+          </div>
+          <div class="stat">
             <dt>Peer-reviewed papers</dt>
             <dd><span data-count="4">4</span></dd>
             <p>incl. Journal of Systems and Software</p>
-          </div>
-          <div class="stat">
-            <dt>Requirements classification</dt>
-            <dd><span data-count="87.9" data-decimals="1">87.9</span><small>%</small></dd>
-            <p>Edge4RE, LoRA-tuned on-device LLM</p>
-          </div>
-          <div class="stat">
-            <dt>Expert-labelled utterances</dt>
-            <dd><span data-count="1362">1,362</span></dd>
-            <p>speech dataset, rationale per label</p>
-          </div>
-          <div class="stat">
-            <dt>Study participants</dt>
-            <dd><span data-count="181">181</span></dd>
-            <p>mixed-methods study, JSS 2026</p>
           </div>
         </dl>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="container">
-        <header class="section-head reveal">
-          <p class="eyebrow"><span>01</span>About</p>
-          <h2>Research depth, <span class="serif">engineering</span> habits.</h2>
-        </header>
-
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p class="lead">
-              I'm a PhD candidate in Information Technology at Deakin University (thesis under examination), working on LLM applications and multimodal emotion recognition.
-            </p>
-            <p>
-              I've worked on both sides of AI training. I built an expert-labelled speech dataset with a documented rationale for every decision, used it to LoRA-fine-tune the language model behind <strong>Edge4RE</strong> (APSEC 2025, 87.9% classification accuracy), and I audit model-generated annotations in ongoing research.
-            </p>
-            <p>
-              I build end-to-end AI systems in Python, from Gemini-based speech pipelines to RAG and agentic workflows. I'm a native speaker of Mandarin and Cantonese and work professionally in English, and I spent six years as a live radio host, so I pay close attention to how people actually talk.
-            </p>
-
-            <div class="news">
-              <p class="news-title">Latest</p>
-              <ul>
-                <li><time>2026</time><span>Paper on the emotional dimensions of requirements engineering accepted in <strong>JSS</strong>.</span></li>
-                <li><time>2026</time><span>PhD thesis submitted; under examination.</span></li>
-                <li><time>2026</time><span>Building five demos from my systematic mapping study (see below).</span></li>
-                <li><time>2025</time><span><strong>Edge4RE</strong> published at APSEC 2025.</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="focus-list" data-stagger>
-            <article class="focus spotlight reveal">
-              <span class="focus-icon"><svg class="i"><use href="#i-spark"/></svg></span>
-              <h3>LLM applications</h3>
-              <p>RAG pipelines (LangChain, ChromaDB), LoRA fine-tuning, prompt engineering, model evaluation and agentic workflows with Claude, Gemini, GPT and LLaMA.</p>
-            </article>
-            <article class="focus spotlight reveal">
-              <span class="focus-icon"><svg class="i"><use href="#i-audio"/></svg></span>
-              <h3>Speech &amp; multimodal AI</h3>
-              <p>Speech-to-text pipelines, prosodic feature labelling and emotion recognition from voice and text, using transformer, CNN and LSTM models.</p>
-            </article>
-            <article class="focus spotlight reveal">
-              <span class="focus-icon"><svg class="i"><use href="#i-db"/></svg></span>
-              <h3>AI training-data quality</h3>
-              <p>Dataset construction, annotation guidelines, per-decision reasoning and QA of model-generated labels with confidence-threshold review.</p>
-            </article>
-            <article class="focus spotlight reveal">
-              <span class="focus-icon"><svg class="i"><use href="#i-shield"/></svg></span>
-              <h3>Privacy by design</h3>
-              <p>Edge–cloud inference that keeps sensitive data on the device, and emotion analytics that never score individuals.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ DEMOS ============
+    <!-- ============ PROJECTS ============
          To finish a demo:
            1. Media: replace the <div class="demo-placeholder">…</div> with a screenshot or a short muted video, e.g.
                 <img src="assets/demos/elicitsense.png" alt="ElicitSense requirements register">
@@ -271,20 +214,20 @@
            2. Links: put the URL in href="". Links with an empty href show as "Soon" automatically.
            3. Status: change "In development" to "Live" and the class badge-dev to badge-live.
     -->
-    <section class="section section-alt" id="demos">
+    <section class="section section-alt" id="projects">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow"><span>02</span>Demos</p>
-          <h2>Five products from <span class="serif">one research map.</span></h2>
+          <p class="eyebrow"><span>01</span>Projects</p>
+          <h2>Five LLM products, <span class="serif">built end to end.</span></h2>
           <p class="section-lede">
-            My systematic mapping of 57 studies charts where emotion-aware tooling in software engineering is missing. Each demo targets one of those empty cells.
+            Working systems, not notebooks: each has a defined pipeline, an evaluation set and a privacy story. The problems come from my systematic mapping of 57 studies, which shows where tooling is missing.
           </p>
         </header>
 
         <ul class="principles reveal" data-stagger>
-          <li><svg class="i"><use href="#i-bolt"/></svg>Runs on sample data, no API key needed</li>
-          <li><svg class="i"><use href="#i-book"/></svg>Research basis &amp; limitations on every page</li>
-          <li><svg class="i"><use href="#i-scale"/></svg>“Grounded in” evidence, never over-claimed</li>
+          <li><svg class="i"><use href="#i-check"/></svg>Schema-validated structured output</li>
+          <li><svg class="i"><use href="#i-scale"/></svg>Scored against gold labels</li>
+          <li><svg class="i"><use href="#i-bolt"/></svg>Sample-data mode, no API key needed</li>
           <li><svg class="i"><use href="#i-user-off"/></svg>No per-person emotion scores</li>
         </ul>
 
@@ -319,84 +262,43 @@
               </div>
               <h3>ElicitSense</h3>
               <p class="demo-tagline">Meeting recordings → an evidence-linked requirements register.</p>
-              <p>Each requirement cites the exact words and timestamp it came from, gets quality checks, and is flagged for follow-up when the stakeholder sounded unsure. Changes are tracked across meetings, and the register exports to Jira.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Requirements: <strong>0 studies</strong></span></p>
+              <p>A Python pipeline that transcribes locally, extracts typed requirements with Claude or GPT under one shared schema, and keeps only the items whose quote matches the transcript. Hesitant answers are flagged for follow-up, and a cross-meeting register tracks refinements, conflicts and superseded items.</p>
+              <p class="demo-gap"><span class="gap-label">Status</span><span class="gap-value">CLI pipeline and register done · <strong>web UI next</strong></span></p>
               <ul class="tags">
-                <li>On-device transcription</li><li>LLM extraction</li><li>Evidence verification</li><li>Cited Q&amp;A</li>
+                <li>Python</li><li>faster-whisper</li><li>Claude API</li><li>OpenAI API</li><li>Pydantic</li><li>pytest</li>
               </ul>
               <div class="demo-links">
                 <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                 <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
               </div>
             </div>
-          </article>
 
-          <!-- DEMO 2 · PR Tone Coach -->
-          <article class="demo spotlight reveal" id="demo-pr-tone-coach">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <rect class="mock-card" x="40" y="30" width="320" height="64" rx="10"/>
-                  <circle class="mock-chip" cx="64" cy="54" r="10"/><rect class="mock-line" x="84" y="50" width="150" height="6" rx="3"/>
-                  <rect class="mock-strike" x="56" y="74" width="230" height="6" rx="3"/><line class="mock-strike-line" x1="52" y1="77" x2="292" y2="77"/>
-                  <rect class="mock-warn" x="300" y="44" width="46" height="16" rx="8"/>
-                  <path class="mock-arrow" d="M200 104v18m-6-6 6 6 6-6"/>
-                  <rect class="mock-card is-ok" x="40" y="132" width="320" height="64" rx="10"/>
-                  <circle class="mock-chip" cx="64" cy="156" r="10"/><rect class="mock-line" x="84" y="152" width="190" height="6" rx="3"/><rect class="mock-line faint" x="56" y="176" width="250" height="6" rx="3"/>
-                  <rect class="mock-ok" x="300" y="146" width="46" height="16" rx="8"/>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+            <!-- Pipeline and evaluation (numbers from the ElicitSense README; update when the eval set grows) -->
+            <div class="demo-deep">
+              <div class="deep-block">
+                <p class="deep-title">Pipeline</p>
+                <ol class="pipeline">
+                  <li><span class="pl-step">Transcribe</span><span class="pl-note">faster-whisper, on device, word timestamps</span></li>
+                  <li><span class="pl-step">Detect cues</span><span class="pl-note">hedges, filled and long pauses, slow speech</span></li>
+                  <li><span class="pl-step">Extract</span><span class="pl-note">Claude or GPT, structured output</span></li>
+                  <li><span class="pl-step">Verify</span><span class="pl-note">quote must match its cited segment</span></li>
+                  <li><span class="pl-step">Merge</span><span class="pl-note">LLM proposes links, code applies status</span></li>
+                </ol>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">02</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
-              </div>
-              <h3>PR Tone Coach</h3>
-              <p class="demo-tagline">Check a code-review comment before you send it.</p>
-              <p>Identifies whether a comment targets the person, the code or the tooling, estimates the risk of pushback, and suggests a rewrite.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Design &amp; implementation: <strong>0 studies</strong></span></p>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+              <div class="deep-block">
+                <p class="deep-title">Evaluation vs gold labels</p>
+                <dl class="evals">
+                  <div><dt>Requirement recall</dt><dd>19<small>/19</small></dd></div>
+                  <div><dt>Quotes verified</dt><dd>30<small>/30</small></dd></div>
+                  <div><dt>Uncertainty flags P&nbsp;/&nbsp;R</dt><dd>1.00<small> / 1.00</small></dd></div>
+                  <div><dt>Register relation precision</dt><dd>0.80<small>–0.90</small></dd></div>
+                </dl>
+                <p class="deep-note">Smoke test on three synthetic meetings, not a benchmark. Role-played recordings and a held-out project come next.</p>
               </div>
             </div>
           </article>
 
-          <!-- DEMO 3 · ReleasePulse -->
-          <article class="demo spotlight reveal" id="demo-releasepulse">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <line class="mock-axis" x1="48" y1="180" x2="360" y2="180"/>
-                  <g class="mock-cols">
-                    <rect x="64" y="120" width="26" height="60" rx="4"/><rect x="124" y="96" width="26" height="84" rx="4"/><rect x="184" y="134" width="26" height="46" rx="4"/><rect x="244" y="74" width="26" height="106" rx="4"/><rect x="304" y="104" width="26" height="76" rx="4"/>
-                  </g>
-                  <path class="mock-trend" d="M77 102 C110 70, 130 84, 137 80 S180 128, 197 116 S240 50, 257 56 S300 92, 317 86"/>
-                  <g class="mock-dots"><circle cx="77" cy="102" r="4"/><circle cx="137" cy="80" r="4"/><circle cx="197" cy="116" r="4"/><circle cx="257" cy="56" r="4"/><circle cx="317" cy="86" r="4"/></g>
-                  <g class="mock-ticks"><rect x="66" y="190" width="22" height="5" rx="2.5"/><rect x="126" y="190" width="22" height="5" rx="2.5"/><rect x="186" y="190" width="22" height="5" rx="2.5"/><rect x="246" y="190" width="22" height="5" rx="2.5"/><rect x="306" y="190" width="22" height="5" rx="2.5"/></g>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
-              </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">03</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
-              </div>
-              <h3>ReleasePulse</h3>
-              <p class="demo-tagline">App reviews and tickets → emotion by release and feature.</p>
-              <p>Turns user feedback into prioritisation evidence for each release and feature, and can feed new requirements into the ElicitSense register.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Decision-making bias × Requirements: <strong>1 study</strong></span></p>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- DEMO 4 · SentiBench -->
+          <!-- DEMO 2 · SentiBench -->
           <article class="demo spotlight reveal" id="demo-sentibench">
             <div class="demo-media">
               <div class="demo-placeholder">
@@ -415,13 +317,81 @@
             </div>
             <div class="demo-body">
               <div class="demo-meta">
-                <span class="demo-num">04</span>
+                <span class="demo-num">02</span>
                 <span class="badge badge-dev"><span class="dot"></span>In development</span>
               </div>
               <h3>SentiBench</h3>
               <p class="demo-tagline">An evaluation harness for software-engineering sentiment.</p>
-              <p>Benchmarks lexicon-based, SE-specific and LLM sentiment classifiers side by side on software-engineering datasets.</p>
+              <p>Benchmarks lexicon-based, SE-specific and LLM sentiment classifiers side by side on software-engineering datasets, with the same splits and metrics for each, so choosing a model is a measured decision.</p>
               <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Recognition tools × Cross-phase: <strong>10 studies, fragmented</strong></span></p>
+              <ul class="tags"><li>LLM vs baselines</li><li>Shared splits &amp; metrics</li><li>Reproducible runs</li></ul>
+              <div class="demo-links">
+                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- DEMO 3 · PR Tone Coach -->
+          <article class="demo spotlight reveal" id="demo-pr-tone-coach">
+            <div class="demo-media">
+              <div class="demo-placeholder">
+                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                  <rect class="mock-card" x="40" y="30" width="320" height="64" rx="10"/>
+                  <circle class="mock-chip" cx="64" cy="54" r="10"/><rect class="mock-line" x="84" y="50" width="150" height="6" rx="3"/>
+                  <rect class="mock-strike" x="56" y="74" width="230" height="6" rx="3"/><line class="mock-strike-line" x1="52" y1="77" x2="292" y2="77"/>
+                  <rect class="mock-warn" x="300" y="44" width="46" height="16" rx="8"/>
+                  <path class="mock-arrow" d="M200 104v18m-6-6 6 6 6-6"/>
+                  <rect class="mock-card is-ok" x="40" y="132" width="320" height="64" rx="10"/>
+                  <circle class="mock-chip" cx="64" cy="156" r="10"/><rect class="mock-line" x="84" y="152" width="190" height="6" rx="3"/><rect class="mock-line faint" x="56" y="176" width="250" height="6" rx="3"/>
+                  <rect class="mock-ok" x="300" y="146" width="46" height="16" rx="8"/>
+                </svg>
+                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              </div>
+            </div>
+            <div class="demo-body">
+              <div class="demo-meta">
+                <span class="demo-num">03</span>
+                <span class="badge badge-dev"><span class="dot"></span>In development</span>
+              </div>
+              <h3>PR Tone Coach</h3>
+              <p class="demo-tagline">Check a code-review comment before you send it.</p>
+              <p>Identifies whether a comment targets the person, the code or the tooling, estimates the risk of pushback, and suggests a rewrite.</p>
+              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Design &amp; implementation: <strong>0 studies</strong></span></p>
+              <ul class="tags"><li>LLM classification</li><li>Risk scoring</li><li>Guided rewriting</li></ul>
+              <div class="demo-links">
+                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- DEMO 4 · ReleasePulse -->
+          <article class="demo spotlight reveal" id="demo-releasepulse">
+            <div class="demo-media">
+              <div class="demo-placeholder">
+                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                  <line class="mock-axis" x1="48" y1="180" x2="360" y2="180"/>
+                  <g class="mock-cols">
+                    <rect x="64" y="120" width="26" height="60" rx="4"/><rect x="124" y="96" width="26" height="84" rx="4"/><rect x="184" y="134" width="26" height="46" rx="4"/><rect x="244" y="74" width="26" height="106" rx="4"/><rect x="304" y="104" width="26" height="76" rx="4"/>
+                  </g>
+                  <path class="mock-trend" d="M77 102 C110 70, 130 84, 137 80 S180 128, 197 116 S240 50, 257 56 S300 92, 317 86"/>
+                  <g class="mock-dots"><circle cx="77" cy="102" r="4"/><circle cx="137" cy="80" r="4"/><circle cx="197" cy="116" r="4"/><circle cx="257" cy="56" r="4"/><circle cx="317" cy="86" r="4"/></g>
+                  <g class="mock-ticks"><rect x="66" y="190" width="22" height="5" rx="2.5"/><rect x="126" y="190" width="22" height="5" rx="2.5"/><rect x="186" y="190" width="22" height="5" rx="2.5"/><rect x="246" y="190" width="22" height="5" rx="2.5"/><rect x="306" y="190" width="22" height="5" rx="2.5"/></g>
+                </svg>
+                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              </div>
+            </div>
+            <div class="demo-body">
+              <div class="demo-meta">
+                <span class="demo-num">04</span>
+                <span class="badge badge-dev"><span class="dot"></span>In development</span>
+              </div>
+              <h3>ReleasePulse</h3>
+              <p class="demo-tagline">App reviews and tickets → emotion by release and feature.</p>
+              <p>Turns user feedback into prioritisation evidence for each release and feature, and can feed new requirements into the ElicitSense register.</p>
+              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Decision-making bias × Requirements: <strong>1 study</strong></span></p>
+              <ul class="tags"><li>Aspect-based sentiment</li><li>Release-level aggregation</li><li>Feeds ElicitSense</li></ul>
               <div class="demo-links">
                 <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                 <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
@@ -454,6 +424,7 @@
               <p class="demo-tagline">An opt-in team pulse for retrospectives.</p>
               <p>Self-reported and k-anonymous by design: it shows how the team is doing without ever scoring an individual.</p>
               <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Team health × Maintenance: <strong>0 studies</strong>, no interventions</span></p>
+              <ul class="tags"><li>k-anonymity</li><li>Opt-in by design</li><li>Team-level aggregates</li></ul>
               <div class="demo-links">
                 <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                 <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
@@ -464,87 +435,63 @@
       </div>
     </section>
 
-    <!-- ============ PUBLICATIONS ============ -->
-    <section class="section" id="publications">
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow"><span>03</span>Publications</p>
-          <h2>Peer-reviewed <span class="serif">research.</span></h2>
-          <p class="section-lede">
-            Emotion-aware and privacy-preserving AI for software engineering, from edge computing platforms to LLM-based requirements tooling.
-          </p>
+          <p class="eyebrow"><span>02</span>About</p>
+          <h2>An engineer with a researcher's <span class="serif">standard of evidence.</span></h2>
         </header>
 
-        <article class="pub-featured spotlight reveal">
-          <div class="pub-featured-main">
-          <div class="pub-featured-top">
-            <span class="badge badge-live"><span class="dot"></span>Accepted · 2026</span>
-            <span class="venue-mono">Journal of Systems and Software · Elsevier</span>
-          </div>
-          <h3>The Emotional Dimensions of Requirements Engineering: Recognition Gaps, Vulnerability Patterns, and Evidence-Based Strategies</h3>
-          <p class="authors"><strong>Ben Cheng</strong> et al.</p>
-          <p class="pub-abstract">
-            A mixed-methods study with 181 participants that examines how emotions in requirements engineering go unrecognised, where vulnerability patterns emerge, and which strategies the evidence supports. I led the survey design, qualitative thematic coding and statistical analysis (SPSS).
-          </p>
-          <div class="pub-foot">
-            <ul class="tags">
-              <li>Mixed methods</li><li>N = 181</li><li>Thematic analysis</li><li>Requirements engineering</li>
-            </ul>
-            <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-up-right"/></svg>DOI</a>
-          </div>
-          </div>
-          <div class="pub-cover" aria-hidden="true">
-            <span class="pub-cover-top">Elsevier · 2026</span>
-            <span class="pub-cover-mark serif">JSS</span>
-            <span class="pub-cover-name">Journal of Systems<br>and Software</span>
-            <span class="pub-cover-stamp"><svg class="i"><use href="#i-check"/></svg>Accepted</span>
-          </div>
-        </article>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="lead">
+              I'm an AI engineer in Melbourne. I build LLM applications that turn messy human input, especially speech, into structured data that other software can rely on.
+            </p>
+            <p>
+              My recent work covers the whole pipeline: local speech-to-text with word timestamps, structured extraction with Claude, GPT and Gemini, RAG over ChromaDB, and LoRA fine-tuning for on-device inference (<strong>Edge4RE</strong>, 87.9% accuracy, APSEC 2025). I also build the data underneath: a 1,362-utterance expert-labelled speech dataset with a written rationale for every label.
+            </p>
+            <p>
+              I've just submitted my PhD in Information Technology at Deakin University. Before that I spent six years as a live radio host, and I'm a native Mandarin and Cantonese speaker working in English. That helps when the input to a model is real, unscripted conversation.
+            </p>
 
-        <ol class="pub-list" data-stagger>
-          <li class="pub reveal">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
-              <h3>Emotions in Software Engineering: A Systematic Mapping Study</h3>
-              <p class="authors"><strong>Ben Cheng</strong>, Yi Wang, Chetan Arora, Thuong Hoang, Xiao Liu</p>
-              <p class="venue">Automated Software Engineering (Springer) <span class="badge badge-muted">Under review</span></p>
-              <p class="pub-note">Classifies 57 primary studies by lifecycle phase × emotional impact. It's the research map behind the five demos above.</p>
+            <div class="news">
+              <p class="news-title">Latest</p>
+              <ul>
+                <li><time>2026</time><span><strong>ElicitSense</strong> pipeline running end to end: transcription, extraction, evidence checks and a cross-meeting register.</span></li>
+                <li><time>2026</time><span>Paper on the emotional dimensions of requirements engineering accepted in <strong>JSS</strong>.</span></li>
+                <li><time>2026</time><span>PhD thesis submitted; under examination.</span></li>
+                <li><time>2025</time><span><strong>Edge4RE</strong>, an edge–cloud LLM framework, published at APSEC 2025.</span></li>
+              </ul>
             </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub-year">2025</span>
-            <div class="pub-body">
-              <h3>Edge4RE: A Novel Edge-Cloud Collaborative Framework for Privacy-Preserving Automated Requirements Documentation</h3>
-              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
-              <p class="venue">Asia-Pacific Software Engineering Conference (APSEC 2025)</p>
-              <p class="pub-note">Edge–cloud collaborative LLM inference with a LoRA-fine-tuned on-device model; 87.9% accuracy on requirements classification.</p>
-            </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub-year">2023</span>
-            <div class="pub-body">
-              <h3>Multi-Modal Emotion Recognition for Enhanced Requirements Engineering: A Novel Approach</h3>
-              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
-              <p class="venue">IEEE International Requirements Engineering Conference (RE 2023)</p>
-              <p class="pub-note">MEmoRE: multimodal emotion recognition during requirements elicitation. ElicitSense turns this prototype into a product.</p>
-            </div>
-          </li>
-          <li class="pub reveal">
-            <span class="pub-year">2021</span>
-            <div class="pub-body">
-              <h3>Edge4Emotion: An Edge Computing Based Multi-Source Emotion Recognition Platform for Human-Centric Software Engineering</h3>
-              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
-              <p class="venue">IEEE · 2021</p>
-              <p class="pub-note">An edge-computing platform that fuses multiple sources for emotion recognition in human-centric software engineering.</p>
-            </div>
-          </li>
-        </ol>
+          </div>
 
-        <p class="pub-more reveal">
-          <a class="link" href="https://orcid.org/0009-0005-3994-517X" target="_blank" rel="noopener">
-            <svg class="i"><use href="#i-orcid"/></svg>Full record on ORCID<svg class="i"><use href="#i-up-right"/></svg>
-          </a>
-        </p>
+          <div class="focus-wrap">
+            <p class="aside-title reveal">How I build LLM systems</p>
+            <div class="focus-list" data-stagger>
+              <article class="focus spotlight reveal">
+                <span class="focus-icon"><svg class="i"><use href="#i-scale"/></svg></span>
+                <h3>Evaluation first</h3>
+                <p>Gold labels, precision and recall, and regression tests come before prompt tweaks. Results ship with their caveats.</p>
+              </article>
+              <article class="focus spotlight reveal">
+                <span class="focus-icon"><svg class="i"><use href="#i-check"/></svg></span>
+                <h3>Grounded output</h3>
+                <p>Schema-validated structured output. Every claim cites its source, and code rejects anything it can't verify.</p>
+              </article>
+              <article class="focus spotlight reveal">
+                <span class="focus-icon"><svg class="i"><use href="#i-code"/></svg></span>
+                <h3>Model proposes, code decides</h3>
+                <p>The LLM suggests labels and links; deterministic code applies state changes, so behaviour stays testable and auditable.</p>
+              </article>
+              <article class="focus spotlight reveal">
+                <span class="focus-icon"><svg class="i"><use href="#i-shield"/></svg></span>
+                <h3>Local-first and private</h3>
+                <p>On-device transcription and LoRA-tuned edge models keep raw audio and sensitive text off the cloud. Only what's needed is sent.</p>
+              </article>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -552,20 +499,33 @@
     <section class="section section-alt" id="experience">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow"><span>04</span>Experience</p>
+          <p class="eyebrow"><span>03</span>Experience</p>
           <h2>Where I've <span class="serif">built things.</span></h2>
         </header>
 
         <div class="exp-grid">
           <ol class="timeline">
             <li class="tl-item reveal">
+              <div class="tl-when">2026</div>
+              <div class="tl-card spotlight">
+                <h3>ElicitSense: LLM Requirements Pipeline</h3>
+                <p class="tl-org">Independent project · Python</p>
+                <ul>
+                  <li>Built a speech-to-requirements pipeline: local <strong>faster-whisper</strong> transcription with word timestamps, uncertainty cues from text and timing, and requirement extraction with <strong>Claude or GPT</strong> behind one prompt and Pydantic schema.</li>
+                  <li>Added deterministic evidence verification: an extracted item is kept only if its quote matches the transcript segment it cites (30 of 30 verified in evaluation).</li>
+                  <li>Designed a cross-meeting register in which the model proposes relations (refines, supersedes, conflicts) and code applies status changes and history, keeping state testable.</li>
+                  <li>Wrote gold labels and scorers for cues, extraction and the register, plus a pytest suite, to measure every prompt change.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="tl-item reveal">
               <div class="tl-when">2022 — Present</div>
               <div class="tl-card spotlight">
                 <h3>PhD Researcher, Multimodal Emotion &amp; Speech Analysis</h3>
                 <p class="tl-org">Deakin University · Melbourne</p>
                 <ul>
-                  <li>Built a <strong>1,362-utterance</strong> training dataset from multi-speaker meeting recordings: defined the labelling rules, documented the reasoning behind each label, and flagged low-confidence cases for second review.</li>
                   <li>Built an end-to-end meeting analysis system: <strong>Gemini 2.5 Pro</strong> speech-to-text and emotion recognition, a <strong>ChromaDB RAG</strong> pipeline for requirements Q&amp;A, and a Streamlit UI.</li>
+                  <li>Built a <strong>1,362-utterance</strong> training dataset from multi-speaker meeting recordings: defined the labelling rules, documented the reasoning behind each label, and flagged low-confidence cases for second review.</li>
                   <li>Audited and refined AI-generated annotations across four meeting datasets, correcting labels below a 0.7 confidence threshold.</li>
                   <li>Designed and evaluated CNN, LSTM and transformer models for multimodal emotion recognition, with state-of-the-art results on requirements engineering datasets.</li>
                   <li>Ran a mixed-methods study (<strong>N = 181</strong>): survey design, thematic coding and statistical analysis. Accepted in JSS.</li>
@@ -579,7 +539,7 @@
                 <p class="tl-org">Deakin University · published at APSEC 2025</p>
                 <ul>
                   <li>Developed a privacy-preserving automated requirements documentation system using edge–cloud collaborative LLM inference, reaching <strong>87.9%</strong> accuracy on requirements classification.</li>
-                  <li>Implemented LoRA fine-tuning and the Python inference pipeline for on-device LLM deployment.</li>
+                  <li>Implemented <strong>LoRA</strong> fine-tuning and the Python inference pipeline for on-device LLM deployment, so sensitive meeting text is processed on the edge.</li>
                 </ul>
               </div>
             </li>
@@ -639,30 +599,30 @@
     <section class="section" id="skills">
       <div class="container">
         <header class="section-head reveal">
-          <p class="eyebrow"><span>05</span>Toolkit</p>
-          <h2>What I <span class="serif">work with.</span></h2>
+          <p class="eyebrow"><span>04</span>Skills</p>
+          <h2>The stack I <span class="serif">ship with.</span></h2>
         </header>
 
         <div class="skills-grid" data-stagger>
           <div class="skill-group reveal">
-            <h3>LLM applications</h3>
-            <ul class="chips"><li>RAG</li><li>LangChain</li><li>ChromaDB</li><li>LoRA fine-tuning</li><li>Prompt engineering</li><li>Model evaluation</li><li>Agentic workflows</li><li>Claude</li><li>Gemini</li><li>GPT</li><li>LLaMA</li></ul>
+            <h3>LLM engineering</h3>
+            <ul class="chips"><li>Claude API</li><li>OpenAI API</li><li>Gemini</li><li>Structured output</li><li>Prompt engineering</li><li>Tool use &amp; agents</li><li>RAG</li><li>LangChain</li><li>ChromaDB</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3>Machine learning &amp; NLP</h3>
-            <ul class="chips"><li>Transformers</li><li>CNN</li><li>LSTM</li><li>Multimodal classification</li><li>HuggingFace</li><li>spaCy</li></ul>
+            <h3>Evaluation &amp; data</h3>
+            <ul class="chips"><li>LLM evaluation</li><li>Gold-label scoring</li><li>Precision / recall / F1</li><li>Dataset construction</li><li>Annotation guidelines</li><li>Label QA</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3>Audio &amp; speech</h3>
-            <ul class="chips"><li>Speech-to-text pipelines</li><li>Audio annotation</li><li>Prosodic features</li><li>Voice emotion recognition</li><li>Multilingual transcription</li></ul>
+            <h3>Models &amp; fine-tuning</h3>
+            <ul class="chips"><li>LoRA</li><li>HuggingFace</li><li>LLaMA</li><li>Transformers</li><li>CNN</li><li>LSTM</li><li>Multimodal classification</li><li>spaCy</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3>AI training data</h3>
-            <ul class="chips"><li>Dataset construction</li><li>Annotation guidelines</li><li>Label QA</li><li>Confidence-threshold review</li></ul>
+            <h3>Speech &amp; audio</h3>
+            <ul class="chips"><li>faster-whisper</li><li>Speech-to-text pipelines</li><li>Word timestamps</li><li>Prosodic features</li><li>Voice emotion recognition</li><li>Multilingual transcription</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Engineering</h3>
-            <ul class="chips"><li>Python</li><li>C / C++</li><li>Java</li><li>C#</li><li>PHP</li><li>R</li><li>Streamlit</li><li>Git</li><li>Jupyter</li><li>Docker</li><li>Unity</li><li>SPSS</li></ul>
+            <ul class="chips"><li>Python</li><li>Pydantic</li><li>pytest</li><li>uv</li><li>Streamlit</li><li>Docker</li><li>Git</li><li>Jupyter</li><li>C / C++</li><li>Java</li><li>C#</li><li>R</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Languages</h3>
@@ -677,6 +637,90 @@
       </div>
     </section>
 
+    <!-- ============ PUBLICATIONS ============ -->
+    <section class="section section-alt" id="publications">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>05</span>Publications</p>
+          <h2>Peer-reviewed <span class="serif">research.</span></h2>
+          <p class="section-lede">
+            The research behind the engineering: privacy-preserving LLMs, multimodal emotion recognition and human factors in software teams.
+          </p>
+        </header>
+
+        <article class="pub-featured spotlight reveal">
+          <div class="pub-featured-main">
+          <div class="pub-featured-top">
+            <span class="badge badge-live"><span class="dot"></span>Accepted · 2026</span>
+            <span class="venue-mono">Journal of Systems and Software · Elsevier</span>
+          </div>
+          <h3>The Emotional Dimensions of Requirements Engineering: Recognition Gaps, Vulnerability Patterns, and Evidence-Based Strategies</h3>
+          <p class="authors"><strong>Ben Cheng</strong> et al.</p>
+          <p class="pub-abstract">
+            A mixed-methods study with 181 participants that examines how emotions in requirements engineering go unrecognised, where vulnerability patterns emerge, and which strategies the evidence supports. I led the survey design, qualitative thematic coding and statistical analysis (SPSS).
+          </p>
+          <div class="pub-foot">
+            <ul class="tags">
+              <li>Mixed methods</li><li>N = 181</li><li>Thematic analysis</li><li>Requirements engineering</li>
+            </ul>
+            <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-up-right"/></svg>DOI</a>
+          </div>
+          </div>
+          <div class="pub-cover" aria-hidden="true">
+            <span class="pub-cover-top">Elsevier · 2026</span>
+            <span class="pub-cover-mark serif">JSS</span>
+            <span class="pub-cover-name">Journal of Systems<br>and Software</span>
+            <span class="pub-cover-stamp"><svg class="i"><use href="#i-check"/></svg>Accepted</span>
+          </div>
+        </article>
+
+        <ol class="pub-list" data-stagger>
+          <li class="pub reveal">
+            <span class="pub-year">2026</span>
+            <div class="pub-body">
+              <h3>Emotions in Software Engineering: A Systematic Mapping Study</h3>
+              <p class="authors"><strong>Ben Cheng</strong>, Yi Wang, Chetan Arora, Thuong Hoang, Xiao Liu</p>
+              <p class="venue">Automated Software Engineering (Springer) <span class="badge badge-muted">Under review</span></p>
+              <p class="pub-note">Classifies 57 primary studies by lifecycle phase × emotional impact. It's the research map behind the five projects above.</p>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <span class="pub-year">2025</span>
+            <div class="pub-body">
+              <h3>Edge4RE: A Novel Edge-Cloud Collaborative Framework for Privacy-Preserving Automated Requirements Documentation</h3>
+              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
+              <p class="venue">Asia-Pacific Software Engineering Conference (APSEC 2025)</p>
+              <p class="pub-note">Edge–cloud collaborative LLM inference with a LoRA-fine-tuned on-device model; 87.9% accuracy on requirements classification.</p>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <span class="pub-year">2023</span>
+            <div class="pub-body">
+              <h3>Multi-Modal Emotion Recognition for Enhanced Requirements Engineering: A Novel Approach</h3>
+              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
+              <p class="venue">IEEE International Requirements Engineering Conference (RE 2023)</p>
+              <p class="pub-note">MEmoRE: multimodal emotion recognition during requirements elicitation. ElicitSense turns this prototype into a product.</p>
+            </div>
+          </li>
+          <li class="pub reveal">
+            <span class="pub-year">2021</span>
+            <div class="pub-body">
+              <h3>Edge4Emotion: An Edge Computing Based Multi-Source Emotion Recognition Platform for Human-Centric Software Engineering</h3>
+              <p class="authors"><strong>Ben Cheng</strong> et al.</p>
+              <p class="venue">IEEE · 2021</p>
+              <p class="pub-note">An edge-computing platform that fuses multiple sources for emotion recognition in human-centric software engineering.</p>
+            </div>
+          </li>
+        </ol>
+
+        <p class="pub-more reveal">
+          <a class="link" href="https://orcid.org/0009-0005-3994-517X" target="_blank" rel="noopener">
+            <svg class="i"><use href="#i-orcid"/></svg>Full record on ORCID<svg class="i"><use href="#i-up-right"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section class="section contact" id="contact">
       <div class="contact-glow" aria-hidden="true"></div>
@@ -684,7 +728,7 @@
         <p class="eyebrow"><span>06</span>Contact</p>
         <h2 class="contact-title">Let's build AI that <span class="serif grad-text">people can trust.</span></h2>
         <p class="contact-lede">
-          I'm looking for roles in LLM engineering, applied AI, speech and NLP, and AI data quality. The quickest way to reach me is email.
+          I'm looking for AI Engineer and LLM Engineer roles: building LLM applications, RAG and agent systems, speech AI and evaluation. The quickest way to reach me is email.
         </p>
         <div class="contact-actions">
           <a class="btn btn-primary btn-lg" href="mailto:bencheng4ai@gmail.com"><svg class="i"><use href="#i-mail"/></svg>bencheng4ai@gmail.com</a>
@@ -717,6 +761,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=6" defer></script>
+  <script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>
