@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ben Cheng — AI Engineer · LLM Systems</title>
-  <meta name="description" content="Ben Cheng is an AI engineer in Melbourne building LLM applications end to end: structured extraction, RAG, evaluation against gold labels, LoRA fine-tuning and local speech-to-text. PhD candidate (Deakin); published in JSS, APSEC and IEEE RE.">
+  <meta name="description" content="Ben Cheng is an AI engineer in Melbourne building LLM applications for requirements engineering and emotion recognition: structured extraction, RAG, evaluation against gold labels and LoRA fine-tuning. PhD candidate (Deakin); published in JSS, APSEC and IEEE RE.">
   <meta name="author" content="Ben Cheng">
   <link rel="canonical" href="https://benchengai.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://benchengai.github.io/">
   <meta property="og:title" content="Ben Cheng — AI Engineer · LLM Systems">
-  <meta property="og:description" content="LLM pipelines from raw speech to verified, structured output: extraction, RAG, evals and LoRA fine-tuning. Melbourne, open to AI / LLM engineering roles.">
+  <meta property="og:description" content="LLM systems for requirements engineering and emotion recognition: extraction, RAG, evals and LoRA fine-tuning. Melbourne, open to AI / LLM engineering roles.">
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#07090d" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
 
   <script>
     (function () {
@@ -40,7 +40,7 @@
     "email": "mailto:bencheng4ai@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Melbourne", "addressRegion": "VIC", "addressCountry": "AU" },
     "alumniOf": [{ "@type": "CollegeOrUniversity", "name": "Deakin University" }, { "@type": "CollegeOrUniversity", "name": "Southwest University" }],
-    "knowsAbout": ["Large language models", "LLM evaluation", "Structured output", "Retrieval-augmented generation", "LoRA fine-tuning", "Speech recognition", "Multimodal emotion recognition"],
+    "knowsAbout": ["Large language models", "LLM evaluation", "Structured output", "Retrieval-augmented generation", "LoRA fine-tuning", "Requirements engineering", "Multimodal emotion recognition"],
     "knowsLanguage": ["English", "Mandarin", "Cantonese"],
     "sameAs": ["https://orcid.org/0009-0005-3994-517X"]
   }
@@ -127,13 +127,13 @@
             <svg class="i"><use href="#i-arrow"/></svg>
           </a>
 
-          <p class="kicker reveal">AI Engineer · LLM &amp; Speech Systems</p>
+          <p class="kicker reveal"><span>AI Engineer</span> · <span>Requirements Engineering</span> · <span>Emotion Recognition</span></p>
           <h1 class="hero-name reveal">Ben Cheng</h1>
           <p class="hero-role reveal">
-            I build <span class="serif grad-text">LLM systems that listen</span>, taking raw human speech all the way to structured, verified output.
+            I build <span class="serif grad-text">LLM systems that understand people</span>, turning stakeholder conversations into verified requirements and recognising the emotion behind them.
           </p>
           <p class="hero-sub reveal">
-            Structured extraction with Claude, GPT and Gemini, RAG, LoRA fine-tuning and local speech-to-text, each shipped with an evaluation set. Deakin University PhD (thesis submitted), published in JSS, APSEC and IEEE RE.
+            Structured extraction with Claude, GPT and Gemini, RAG, LoRA fine-tuning and multimodal emotion models, each shipped with an evaluation set. Deakin University PhD (thesis submitted), published in JSS, APSEC and IEEE RE.
           </p>
 
           <div class="hero-cta reveal">
@@ -190,7 +190,7 @@
           <div class="stat">
             <dt>Labelled training utterances</dt>
             <dd><span data-count="1362">1,362</span></dd>
-            <p>speech dataset I built, rationale per label</p>
+            <p>dataset I built, rationale per label</p>
           </div>
           <div class="stat">
             <dt>LLM products in build</dt>
@@ -446,10 +446,10 @@
         <div class="about-grid">
           <div class="about-text reveal">
             <p class="lead">
-              I'm an AI engineer in Melbourne. I build LLM applications that turn messy human input, especially speech, into structured data that other software can rely on.
+              I'm an AI engineer in Melbourne working where LLMs meet requirements engineering and emotion recognition: turning what stakeholders say into structured, verifiable requirements, and recognising the emotion and uncertainty behind it.
             </p>
             <p>
-              My recent work covers the whole pipeline: local speech-to-text with word timestamps, structured extraction with Claude, GPT and Gemini, RAG over ChromaDB, and LoRA fine-tuning for on-device inference (<strong>Edge4RE</strong>, 87.9% accuracy, APSEC 2025). I also build the data underneath: a 1,362-utterance expert-labelled speech dataset with a written rationale for every label.
+              My work spans multimodal emotion recognition (CNN, LSTM and transformer models, <strong>MEmoRE</strong> at IEEE RE 2023), LLM-based requirements extraction with Claude, GPT and Gemini, RAG over ChromaDB, and LoRA fine-tuning for on-device requirements classification (<strong>Edge4RE</strong>, 87.9% accuracy, APSEC 2025). I also build the data underneath: a 1,362-utterance expert-labelled dataset with a written rationale for every label.
             </p>
             <p>
               I've just submitted my PhD in Information Technology at Deakin University. Before that I spent six years as a live radio host, and I'm a native Mandarin and Cantonese speaker working in English. That helps when the input to a model is real, unscripted conversation.
@@ -511,7 +511,7 @@
                 <h3>ElicitSense: LLM Requirements Pipeline</h3>
                 <p class="tl-org">Independent project · Python</p>
                 <ul>
-                  <li>Built a speech-to-requirements pipeline: local <strong>faster-whisper</strong> transcription with word timestamps, uncertainty cues from text and timing, and requirement extraction with <strong>Claude or GPT</strong> behind one prompt and Pydantic schema.</li>
+                  <li>Built a meeting-to-requirements pipeline: local <strong>faster-whisper</strong> transcription with word timestamps, uncertainty cues from text and timing, and requirement extraction with <strong>Claude or GPT</strong> behind one prompt and Pydantic schema.</li>
                   <li>Added deterministic evidence verification: an extracted item is kept only if its quote matches the transcript segment it cites (30 of 30 verified in evaluation).</li>
                   <li>Designed a cross-meeting register in which the model proposes relations (refines, supersedes, conflicts) and code applies status changes and history, keeping state testable.</li>
                   <li>Wrote gold labels and scorers for cues, extraction and the register, plus a pytest suite, to measure every prompt change.</li>
@@ -521,7 +521,7 @@
             <li class="tl-item reveal">
               <div class="tl-when">2022 — Present</div>
               <div class="tl-card spotlight">
-                <h3>PhD Researcher, Multimodal Emotion &amp; Speech Analysis</h3>
+                <h3>PhD Researcher, Emotion Recognition &amp; Requirements Engineering</h3>
                 <p class="tl-org">Deakin University · Melbourne</p>
                 <ul>
                   <li>Built an end-to-end meeting analysis system: <strong>Gemini 2.5 Pro</strong> speech-to-text and emotion recognition, a <strong>ChromaDB RAG</strong> pipeline for requirements Q&amp;A, and a Streamlit UI.</li>
@@ -606,23 +606,23 @@
         <div class="skills-grid" data-stagger>
           <div class="skill-group reveal">
             <h3>LLM engineering</h3>
-            <ul class="chips"><li>Claude API</li><li>OpenAI API</li><li>Gemini</li><li>Structured output</li><li>Prompt engineering</li><li>Tool use &amp; agents</li><li>RAG</li><li>LangChain</li><li>ChromaDB</li></ul>
+            <ul class="chips"><li>Claude API</li><li>OpenAI API</li><li>Gemini</li><li>LLaMA</li><li>Structured output</li><li>Prompt engineering</li><li>Tool use &amp; agents</li><li>RAG</li><li>LangChain</li><li>ChromaDB</li><li>LoRA fine-tuning</li><li>HuggingFace</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Requirements engineering</h3>
+            <ul class="chips"><li>Requirements elicitation</li><li>LLM requirements extraction</li><li>Requirements classification</li><li>Evidence traceability</li><li>Change &amp; conflict tracking</li><li>Quality checks</li></ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Emotion recognition</h3>
+            <ul class="chips"><li>Multimodal emotion recognition</li><li>Voice emotion recognition</li><li>Prosodic features</li><li>Uncertainty cues</li><li>Transformers</li><li>CNN</li><li>LSTM</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Evaluation &amp; data</h3>
             <ul class="chips"><li>LLM evaluation</li><li>Gold-label scoring</li><li>Precision / recall / F1</li><li>Dataset construction</li><li>Annotation guidelines</li><li>Label QA</li></ul>
           </div>
           <div class="skill-group reveal">
-            <h3>Models &amp; fine-tuning</h3>
-            <ul class="chips"><li>LoRA</li><li>HuggingFace</li><li>LLaMA</li><li>Transformers</li><li>CNN</li><li>LSTM</li><li>Multimodal classification</li><li>spaCy</li></ul>
-          </div>
-          <div class="skill-group reveal">
-            <h3>Speech &amp; audio</h3>
-            <ul class="chips"><li>faster-whisper</li><li>Speech-to-text pipelines</li><li>Word timestamps</li><li>Prosodic features</li><li>Voice emotion recognition</li><li>Multilingual transcription</li></ul>
-          </div>
-          <div class="skill-group reveal">
             <h3>Engineering</h3>
-            <ul class="chips"><li>Python</li><li>Pydantic</li><li>pytest</li><li>uv</li><li>Streamlit</li><li>Docker</li><li>Git</li><li>Jupyter</li><li>C / C++</li><li>Java</li><li>C#</li><li>R</li></ul>
+            <ul class="chips"><li>Python</li><li>Pydantic</li><li>pytest</li><li>uv</li><li>faster-whisper</li><li>spaCy</li><li>Streamlit</li><li>Docker</li><li>Git</li><li>Jupyter</li><li>C / C++</li><li>Java</li><li>C#</li><li>R</li></ul>
           </div>
           <div class="skill-group reveal">
             <h3>Languages</h3>
@@ -728,7 +728,7 @@
         <p class="eyebrow"><span>06</span>Contact</p>
         <h2 class="contact-title">Let's build AI that <span class="serif grad-text">people can trust.</span></h2>
         <p class="contact-lede">
-          I'm looking for AI Engineer and LLM Engineer roles: building LLM applications, RAG and agent systems, speech AI and evaluation. The quickest way to reach me is email.
+          I'm looking for AI Engineer and LLM Engineer roles: building LLM applications, RAG and agent systems, requirements engineering tools, emotion recognition and evaluation. The quickest way to reach me is email.
         </p>
         <div class="contact-actions">
           <a class="btn btn-primary btn-lg" href="mailto:bencheng4ai@gmail.com"><svg class="i"><use href="#i-mail"/></svg>bencheng4ai@gmail.com</a>
@@ -761,6 +761,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=7" defer></script>
+  <script src="assets/js/main.js?v=8" defer></script>
 </body>
 </html>

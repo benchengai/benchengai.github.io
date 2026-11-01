@@ -519,6 +519,7 @@ html:not(.js) [data-theme-toggle] { display: none; }
   color: var(--faint);
   margin-bottom: 14px;
 }
+.kicker span { white-space: nowrap; }
 
 .hero-name {
   font-size: clamp(3.4rem, 9.5vw, 7.25rem);

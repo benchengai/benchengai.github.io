@@ -54,7 +54,7 @@ ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/
    ```
 3. 仓库 Settings → Pages → Source 选 `main` 分支，几分钟后网址就是 `https://你的用户名.github.io`。
 
-改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=7`、`main.js?v=7` 的数字加 1，避免访客浏览器用旧缓存。
+改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=8`、`main.js?v=8` 的数字加 1，避免访客浏览器用旧缓存。
 
 ## 加回 CV 下载
 
