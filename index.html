@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
 
   <script>
     (function () {
@@ -179,258 +179,344 @@
         </figure>
       </div>
 
-      <!-- Stats -->
-      <div class="container">
-        <dl class="stats reveal" data-stagger>
-          <div class="stat">
-            <dt>On-device LLM accuracy</dt>
-            <dd><span data-count="87.9" data-decimals="1">87.9</span><small>%</small></dd>
-            <p>LoRA-tuned, Edge4RE (APSEC 2025)</p>
-          </div>
-          <div class="stat">
-            <dt>Labelled training utterances</dt>
-            <dd><span data-count="1362">1,362</span></dd>
-            <p>dataset I built, rationale per label</p>
-          </div>
-          <div class="stat">
-            <dt>LLM products in build</dt>
-            <dd><span data-count="5">5</span></dd>
-            <p>flagship pipeline runs end to end</p>
-          </div>
-          <div class="stat">
-            <dt>Peer-reviewed papers</dt>
-            <dd><span data-count="4">4</span></dd>
-            <p>incl. Journal of Systems and Software</p>
-          </div>
-        </dl>
-      </div>
     </section>
 
     <!-- ============ PROJECTS ============
-         To finish a demo:
+         Projects are grouped: "Released" (public code) and "In development".
+         To add a project, copy any <article class="demo …"> block into the right group.
+         A card with class demo--flagship spans the full width.
+         To finish an in-development card:
            1. Media: replace the <div class="demo-placeholder">…</div> with a screenshot or a short muted video, e.g.
                 <img src="assets/demos/elicitsense.png" alt="ElicitSense requirements register">
                 <video src="assets/demos/elicitsense.mp4" poster="assets/demos/elicitsense.jpg" autoplay muted loop playsinline></video>
            2. Links: put the URL in href="". Links with an empty href show as "Soon" automatically.
-           3. Status: change "In development" to "Live" and the class badge-dev to badge-live.
+           3. Status: change "In development" to "Released", the class badge-dev to badge-live, and move the card to the Released group.
     -->
     <section class="section section-alt" id="projects">
       <div class="container">
         <header class="section-head reveal">
           <p class="eyebrow"><span>01</span>Projects</p>
-          <h2>Five LLM products, <span class="serif">built end to end.</span></h2>
+          <h2>Things I've <span class="serif">built.</span></h2>
           <p class="section-lede">
-            Working systems, not notebooks: each has a defined pipeline, an evaluation set and a privacy story. The problems come from my systematic mapping of 57 studies, which shows where tooling is missing.
+            LLM systems for requirements engineering, emotion recognition and retrieval, each with an evaluation behind it. Released projects have public code on GitHub; the rest are in active development.
           </p>
         </header>
 
-        <ul class="principles reveal" data-stagger>
-          <li><svg class="i"><use href="#i-check"/></svg>Schema-validated structured output</li>
-          <li><svg class="i"><use href="#i-scale"/></svg>Scored against gold labels</li>
-          <li><svg class="i"><use href="#i-bolt"/></svg>Sample-data mode, no API key needed</li>
-          <li><svg class="i"><use href="#i-user-off"/></svg>No per-person emotion scores</li>
-        </ul>
+        <div class="proj-group">
+          <div class="proj-group-head reveal">
+            <h3>Released</h3>
+            <p>Public code, runnable from the README.</p>
+          </div>
+          <div class="demo-grid">
+            <!-- PROJECT · EmoRE (repo: REDocDemo2026) -->
+            <article class="demo demo--flagship spotlight reveal" id="project-emore">
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="https://raw.githubusercontent.com/benchengai/REDocDemo2026/main/report.png" alt="EmoRE requirements report: a generated SRS with emotion labels and evidence for each requirement" width="1420" height="2346" loading="lazy">
+                </div>
+              </div>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">01</span>
+                  <span class="badge badge-live"><span class="dot"></span>Released</span>
+                  <span class="badge badge-flag">RE'26 tool demo · submitted</span>
+                </div>
+                <h3>EmoRE</h3>
+                <p class="demo-tagline">Meeting audio → an emotion-aware requirements specification.</p>
+                <p>Gemini 2.5 Pro diarises and transcribes the recording and labels every utterance with one of eight emotions. A second stage writes an IEEE 29148 SRS in which those emotions set conflict level, open issues and priority. A RAG module answers questions across meetings, and reports export to .docx.</p>
+                <p class="demo-gap"><span class="gap-label">Evaluated on</span><span class="gap-value">AMI Meeting Corpus, <strong>four consecutive meetings</strong></span></p>
+                <ul class="tags">
+                  <li>Gemini 2.5 Pro</li><li>Multimodal audio</li><li>Emotion recognition</li><li>RAG</li><li>Streamlit</li>
+                </ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href="https://github.com/benchengai/REDocDemo2026"><svg class="i"><use href="#i-code"/></svg>Source on GitHub</a>
+                </div>
+              </div>
+            </article>
 
-        <div class="demo-grid">
-          <!-- DEMO 1 · ElicitSense (flagship) -->
-          <article class="demo demo--flagship spotlight reveal" id="demo-elicitsense">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <g class="mock-bars">
-                    <rect x="24" y="30" width="4" height="22" rx="2"/><rect x="32" y="24" width="4" height="34" rx="2"/><rect x="40" y="34" width="4" height="14" rx="2"/><rect x="48" y="20" width="4" height="42" rx="2"/><rect x="56" y="28" width="4" height="26" rx="2"/><rect x="64" y="36" width="4" height="10" rx="2"/><rect x="72" y="26" width="4" height="30" rx="2"/><rect x="80" y="32" width="4" height="18" rx="2"/><rect x="88" y="39" width="4" height="4" rx="2"/><rect x="96" y="39" width="4" height="4" rx="2"/><rect x="104" y="30" width="4" height="22" rx="2"/><rect x="112" y="22" width="4" height="38" rx="2"/><rect x="120" y="30" width="4" height="22" rx="2"/><rect x="128" y="35" width="4" height="12" rx="2"/>
-                  </g>
-                  <rect class="mock-line" x="148" y="34" width="120" height="6" rx="3"/><rect class="mock-line faint" x="276" y="34" width="70" height="6" rx="3"/>
-                  <g transform="translate(24 76)">
-                    <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="180" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
-                  </g>
-                  <g transform="translate(24 122)">
-                    <rect class="mock-card is-flag" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="150" height="6" rx="3"/><rect class="mock-warn" x="282" y="12" width="58" height="14" rx="7"/>
-                  </g>
-                  <g transform="translate(24 168)">
-                    <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="200" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
-                  </g>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Demo video coming soon</span>
+            <!-- PROJECT · meeting2srs-lora -->
+            <article class="demo spotlight reveal" id="project-meeting2srs-lora">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <g transform="translate(36 34)">
+                      <rect class="mock-line" width="110" height="6" rx="3"/><rect class="mock-line faint" y="20" width="90" height="6" rx="3"/><rect class="mock-line" y="40" width="120" height="6" rx="3"/><rect class="mock-line faint" y="60" width="70" height="6" rx="3"/><rect class="mock-line" y="80" width="104" height="6" rx="3"/><rect class="mock-line faint" y="100" width="96" height="6" rx="3"/><rect class="mock-line" y="120" width="116" height="6" rx="3"/><rect class="mock-line faint" y="140" width="80" height="6" rx="3"/>
+                    </g>
+                    <path class="mock-arrow" d="M170 60 L214 92 L214 132 L170 164"/>
+                    <rect class="mock-chip" x="196" y="100" width="36" height="24" rx="6"/>
+                    <g transform="translate(252 84)">
+                      <rect class="mock-card is-ok" width="116" height="58" rx="8"/><rect class="mock-line" x="12" y="14" width="88" height="6" rx="3"/><rect class="mock-line" x="12" y="27" width="70" height="6" rx="3"/><rect class="mock-line" x="12" y="40" width="80" height="6" rx="3"/>
+                    </g>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Screenshot coming soon</span>
+                </div>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">01</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
-                <span class="badge badge-flag">Flagship</span>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">02</span>
+                  <span class="badge badge-live"><span class="dot"></span>Released</span>
+                </div>
+                <h3>meeting2srs-lora</h3>
+                <p class="demo-tagline">A 2.9 MB LoRA filter that cuts what the LLM has to read.</p>
+                <p>A LoRA-tuned DistilBERT (1.11% of parameters trained, on 1,363 hand-labelled utterances) keeps only the transcript sentences that state requirements. GPT-4o then writes the requirements document, with tokens and latency logged for both paths.</p>
+                <p class="demo-gap"><span class="gap-label">Result</span><span class="gap-value"><strong>−76.3%</strong> segments, <strong>−41.5%</strong> characters sent to the LLM</span></p>
+                <ul class="tags"><li>LoRA (PEFT)</li><li>DistilBERT</li><li>Whisper</li><li>GPT-4o</li><li>PyTorch</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href="https://github.com/benchengai/meeting2srs-lora"><svg class="i"><use href="#i-code"/></svg>Source on GitHub</a>
+                </div>
               </div>
-              <h3>ElicitSense</h3>
-              <p class="demo-tagline">Meeting recordings → an evidence-linked requirements register.</p>
-              <p>A Python pipeline that transcribes locally, extracts typed requirements with Claude or GPT under one shared schema, and keeps only the items whose quote matches the transcript. Hesitant answers are flagged for follow-up, and a cross-meeting register tracks refinements, conflicts and superseded items.</p>
-              <p class="demo-gap"><span class="gap-label">Status</span><span class="gap-value">CLI pipeline and register done · <strong>web UI next</strong></span></p>
-              <ul class="tags">
-                <li>Python</li><li>faster-whisper</li><li>Claude API</li><li>OpenAI API</li><li>Pydantic</li><li>pytest</li>
-              </ul>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
-              </div>
-            </div>
+            </article>
 
-            <!-- Pipeline and evaluation (numbers from the ElicitSense README; update when the eval set grows) -->
-            <div class="demo-deep">
-              <div class="deep-block">
-                <p class="deep-title">Pipeline</p>
-                <ol class="pipeline">
-                  <li><span class="pl-step">Transcribe</span><span class="pl-note">faster-whisper, on device, word timestamps</span></li>
-                  <li><span class="pl-step">Detect cues</span><span class="pl-note">hedges, filled and long pauses, slow speech</span></li>
-                  <li><span class="pl-step">Extract</span><span class="pl-note">Claude or GPT, structured output</span></li>
-                  <li><span class="pl-step">Verify</span><span class="pl-note">quote must match its cited segment</span></li>
-                  <li><span class="pl-step">Merge</span><span class="pl-note">LLM proposes links, code applies status</span></li>
-                </ol>
+            <!-- PROJECT · RAG4AwardDoc -->
+            <article class="demo spotlight reveal" id="project-rag4awarddoc">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <rect class="mock-card" x="30" y="28" width="168" height="170" rx="10"/>
+                    <g class="mock-head"><rect x="46" y="44" width="40" height="7" rx="3.5"/><rect x="96" y="44" width="40" height="7" rx="3.5"/><rect x="146" y="44" width="36" height="7" rx="3.5"/></g>
+                    <g class="mock-cells">
+                      <rect x="46" y="62" width="40" height="18" rx="4"/><rect x="96" y="62" width="40" height="18" rx="4"/><rect x="146" y="62" width="36" height="18" rx="4"/>
+                      <rect x="46" y="88" width="40" height="18" rx="4"/><rect x="96" y="88" width="40" height="18" rx="4" class="b"/><rect x="146" y="88" width="36" height="18" rx="4"/>
+                      <rect x="46" y="114" width="40" height="18" rx="4"/><rect x="96" y="114" width="40" height="18" rx="4"/><rect x="146" y="114" width="36" height="18" rx="4"/>
+                    </g>
+                    <rect class="mock-line faint" x="46" y="150" width="120" height="6" rx="3"/><rect class="mock-line faint" x="46" y="166" width="90" height="6" rx="3"/>
+                    <g transform="translate(220 40)">
+                      <rect class="mock-card" width="150" height="34" rx="8"/><rect class="mock-line" x="12" y="14" width="80" height="6" rx="3"/><rect class="mock-ok" x="104" y="10" width="34" height="14" rx="7"/>
+                    </g>
+                    <g transform="translate(220 86)">
+                      <rect class="mock-card is-flag" width="150" height="34" rx="8"/><rect class="mock-line" x="12" y="14" width="70" height="6" rx="3"/><rect class="mock-warn" x="104" y="10" width="34" height="14" rx="7"/>
+                    </g>
+                    <g transform="translate(220 132)">
+                      <rect class="mock-card" width="150" height="34" rx="8"/><rect class="mock-line" x="12" y="14" width="88" height="6" rx="3"/><rect class="mock-ok" x="104" y="10" width="34" height="14" rx="7"/>
+                    </g>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Screenshot coming soon</span>
+                </div>
               </div>
-              <div class="deep-block">
-                <p class="deep-title">Evaluation vs gold labels</p>
-                <dl class="evals">
-                  <div><dt>Requirement recall</dt><dd>19<small>/19</small></dd></div>
-                  <div><dt>Quotes verified</dt><dd>30<small>/30</small></dd></div>
-                  <div><dt>Uncertainty flags P&nbsp;/&nbsp;R</dt><dd>1.00<small> / 1.00</small></dd></div>
-                  <div><dt>Register relation precision</dt><dd>0.80<small>–0.90</small></dd></div>
-                </dl>
-                <p class="deep-note">Smoke test on three synthetic meetings, not a benchmark. Role-played recordings and a held-out project come next.</p>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">03</span>
+                  <span class="badge badge-live"><span class="dot"></span>Released</span>
+                </div>
+                <h3>RAG4AwardDoc</h3>
+                <p class="demo-tagline">A RAG system, and a benchmark that shows where it fails.</p>
+                <p>Retrieval over an Australian modern award whose answers live in pay-rate tables. Each version is scored on the same frozen question set, with a written log of what changed and why the score moved, from fixed-size chunking to Markdown table extraction.</p>
+                <p class="demo-gap"><span class="gap-label">Benchmark</span><span class="gap-value"><strong>40 questions</strong>: lookups, multi-condition rates, shift totals, refusals</span></p>
+                <ul class="tags"><li>RAG</li><li>Chunking strategies</li><li>Auto-scoring</li><li>Failure analysis</li><li>Python</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href="https://github.com/benchengai/RAG4AwardDoc"><svg class="i"><use href="#i-code"/></svg>Source on GitHub</a>
+                </div>
               </div>
-            </div>
-          </article>
+            </article>
+          </div>
+        </div>
 
-          <!-- DEMO 2 · SentiBench -->
-          <article class="demo spotlight reveal" id="demo-sentibench">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <g class="mock-head"><rect x="130" y="34" width="56" height="8" rx="4"/><rect x="206" y="34" width="56" height="8" rx="4"/><rect x="282" y="34" width="56" height="8" rx="4"/></g>
-                  <g class="mock-rowlabels"><rect x="48" y="66" width="56" height="7" rx="3.5"/><rect x="48" y="104" width="44" height="7" rx="3.5"/><rect x="48" y="142" width="62" height="7" rx="3.5"/><rect x="48" y="180" width="50" height="7" rx="3.5"/></g>
-                  <g class="mock-cells">
-                    <rect x="130" y="56" width="56" height="26" rx="6"/><rect x="206" y="56" width="56" height="26" rx="6" class="b"/><rect x="282" y="56" width="56" height="26" rx="6" class="c"/>
-                    <rect x="130" y="94" width="56" height="26" rx="6" class="b"/><rect x="206" y="94" width="56" height="26" rx="6" class="c"/><rect x="282" y="94" width="56" height="26" rx="6"/>
-                    <rect x="130" y="132" width="56" height="26" rx="6" class="c"/><rect x="206" y="132" width="56" height="26" rx="6"/><rect x="282" y="132" width="56" height="26" rx="6" class="b"/>
-                    <rect x="130" y="170" width="56" height="26" rx="6"/><rect x="206" y="170" width="56" height="26" rx="6" class="c"/><rect x="282" y="170" width="56" height="26" rx="6" class="b"/>
-                  </g>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+        <div class="proj-group">
+          <div class="proj-group-head reveal">
+            <h3>In development</h3>
+            <p>Tools built from my systematic mapping of 57 studies, each aimed at a gap in emotion-aware software tooling.</p>
+          </div>
+          <div class="demo-grid">
+            <!-- PROJECT · ElicitSense (flagship) -->
+            <article class="demo demo--flagship spotlight reveal" id="demo-elicitsense">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <g class="mock-bars">
+                      <rect x="24" y="30" width="4" height="22" rx="2"/><rect x="32" y="24" width="4" height="34" rx="2"/><rect x="40" y="34" width="4" height="14" rx="2"/><rect x="48" y="20" width="4" height="42" rx="2"/><rect x="56" y="28" width="4" height="26" rx="2"/><rect x="64" y="36" width="4" height="10" rx="2"/><rect x="72" y="26" width="4" height="30" rx="2"/><rect x="80" y="32" width="4" height="18" rx="2"/><rect x="88" y="39" width="4" height="4" rx="2"/><rect x="96" y="39" width="4" height="4" rx="2"/><rect x="104" y="30" width="4" height="22" rx="2"/><rect x="112" y="22" width="4" height="38" rx="2"/><rect x="120" y="30" width="4" height="22" rx="2"/><rect x="128" y="35" width="4" height="12" rx="2"/>
+                    </g>
+                    <rect class="mock-line" x="148" y="34" width="120" height="6" rx="3"/><rect class="mock-line faint" x="276" y="34" width="70" height="6" rx="3"/>
+                    <g transform="translate(24 76)">
+                      <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="180" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
+                    </g>
+                    <g transform="translate(24 122)">
+                      <rect class="mock-card is-flag" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="150" height="6" rx="3"/><rect class="mock-warn" x="282" y="12" width="58" height="14" rx="7"/>
+                    </g>
+                    <g transform="translate(24 168)">
+                      <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="200" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
+                    </g>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Demo video coming soon</span>
+                </div>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">02</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">04</span>
+                  <span class="badge badge-dev"><span class="dot"></span>In development</span>
+                  <span class="badge badge-flag">Flagship</span>
+                </div>
+                <h3>ElicitSense</h3>
+                <p class="demo-tagline">Meeting recordings → an evidence-linked requirements register.</p>
+                <p>A Python pipeline that transcribes locally, extracts typed requirements with Claude or GPT under one shared schema, and keeps only the items whose quote matches the transcript. Hesitant answers are flagged for follow-up, and a cross-meeting register tracks refinements, conflicts and superseded items.</p>
+                <p class="demo-gap"><span class="gap-label">Status</span><span class="gap-value">CLI pipeline and register done · <strong>web UI next</strong></span></p>
+                <ul class="tags">
+                  <li>Python</li><li>faster-whisper</li><li>Claude API</li><li>OpenAI API</li><li>Pydantic</li><li>pytest</li>
+                </ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+                </div>
               </div>
-              <h3>SentiBench</h3>
-              <p class="demo-tagline">An evaluation harness for software-engineering sentiment.</p>
-              <p>Benchmarks lexicon-based, SE-specific and LLM sentiment classifiers side by side on software-engineering datasets, with the same splits and metrics for each, so choosing a model is a measured decision.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Recognition tools × Cross-phase: <strong>10 studies, fragmented</strong></span></p>
-              <ul class="tags"><li>LLM vs baselines</li><li>Shared splits &amp; metrics</li><li>Reproducible runs</li></ul>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
 
-          <!-- DEMO 3 · PR Tone Coach -->
-          <article class="demo spotlight reveal" id="demo-pr-tone-coach">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <rect class="mock-card" x="40" y="30" width="320" height="64" rx="10"/>
-                  <circle class="mock-chip" cx="64" cy="54" r="10"/><rect class="mock-line" x="84" y="50" width="150" height="6" rx="3"/>
-                  <rect class="mock-strike" x="56" y="74" width="230" height="6" rx="3"/><line class="mock-strike-line" x1="52" y1="77" x2="292" y2="77"/>
-                  <rect class="mock-warn" x="300" y="44" width="46" height="16" rx="8"/>
-                  <path class="mock-arrow" d="M200 104v18m-6-6 6 6 6-6"/>
-                  <rect class="mock-card is-ok" x="40" y="132" width="320" height="64" rx="10"/>
-                  <circle class="mock-chip" cx="64" cy="156" r="10"/><rect class="mock-line" x="84" y="152" width="190" height="6" rx="3"/><rect class="mock-line faint" x="56" y="176" width="250" height="6" rx="3"/>
-                  <rect class="mock-ok" x="300" y="146" width="46" height="16" rx="8"/>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              <!-- Pipeline and evaluation (numbers from the ElicitSense README; update when the eval set grows) -->
+              <div class="demo-deep">
+                <div class="deep-block">
+                  <p class="deep-title">Pipeline</p>
+                  <ol class="pipeline">
+                    <li><span class="pl-step">Transcribe</span><span class="pl-note">faster-whisper, on device, word timestamps</span></li>
+                    <li><span class="pl-step">Detect cues</span><span class="pl-note">hedges, filled and long pauses, slow speech</span></li>
+                    <li><span class="pl-step">Extract</span><span class="pl-note">Claude or GPT, structured output</span></li>
+                    <li><span class="pl-step">Verify</span><span class="pl-note">quote must match its cited segment</span></li>
+                    <li><span class="pl-step">Merge</span><span class="pl-note">LLM proposes links, code applies status</span></li>
+                  </ol>
+                </div>
+                <div class="deep-block">
+                  <p class="deep-title">Evaluation vs gold labels</p>
+                  <dl class="evals">
+                    <div><dt>Requirement recall</dt><dd>19<small>/19</small></dd></div>
+                    <div><dt>Quotes verified</dt><dd>30<small>/30</small></dd></div>
+                    <div><dt>Uncertainty flags P&nbsp;/&nbsp;R</dt><dd>1.00<small> / 1.00</small></dd></div>
+                    <div><dt>Register relation precision</dt><dd>0.80<small>–0.90</small></dd></div>
+                  </dl>
+                  <p class="deep-note">Smoke test on three synthetic meetings, not a benchmark. Role-played recordings and a held-out project come next.</p>
+                </div>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">03</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
-              </div>
-              <h3>PR Tone Coach</h3>
-              <p class="demo-tagline">Check a code-review comment before you send it.</p>
-              <p>Identifies whether a comment targets the person, the code or the tooling, estimates the risk of pushback, and suggests a rewrite.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Design &amp; implementation: <strong>0 studies</strong></span></p>
-              <ul class="tags"><li>LLM classification</li><li>Risk scoring</li><li>Guided rewriting</li></ul>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- DEMO 4 · ReleasePulse -->
-          <article class="demo spotlight reveal" id="demo-releasepulse">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <line class="mock-axis" x1="48" y1="180" x2="360" y2="180"/>
-                  <g class="mock-cols">
-                    <rect x="64" y="120" width="26" height="60" rx="4"/><rect x="124" y="96" width="26" height="84" rx="4"/><rect x="184" y="134" width="26" height="46" rx="4"/><rect x="244" y="74" width="26" height="106" rx="4"/><rect x="304" y="104" width="26" height="76" rx="4"/>
-                  </g>
-                  <path class="mock-trend" d="M77 102 C110 70, 130 84, 137 80 S180 128, 197 116 S240 50, 257 56 S300 92, 317 86"/>
-                  <g class="mock-dots"><circle cx="77" cy="102" r="4"/><circle cx="137" cy="80" r="4"/><circle cx="197" cy="116" r="4"/><circle cx="257" cy="56" r="4"/><circle cx="317" cy="86" r="4"/></g>
-                  <g class="mock-ticks"><rect x="66" y="190" width="22" height="5" rx="2.5"/><rect x="126" y="190" width="22" height="5" rx="2.5"/><rect x="186" y="190" width="22" height="5" rx="2.5"/><rect x="246" y="190" width="22" height="5" rx="2.5"/><rect x="306" y="190" width="22" height="5" rx="2.5"/></g>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+            <!-- PROJECT · SentiBench -->
+            <article class="demo spotlight reveal" id="demo-sentibench">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <g class="mock-head"><rect x="130" y="34" width="56" height="8" rx="4"/><rect x="206" y="34" width="56" height="8" rx="4"/><rect x="282" y="34" width="56" height="8" rx="4"/></g>
+                    <g class="mock-rowlabels"><rect x="48" y="66" width="56" height="7" rx="3.5"/><rect x="48" y="104" width="44" height="7" rx="3.5"/><rect x="48" y="142" width="62" height="7" rx="3.5"/><rect x="48" y="180" width="50" height="7" rx="3.5"/></g>
+                    <g class="mock-cells">
+                      <rect x="130" y="56" width="56" height="26" rx="6"/><rect x="206" y="56" width="56" height="26" rx="6" class="b"/><rect x="282" y="56" width="56" height="26" rx="6" class="c"/>
+                      <rect x="130" y="94" width="56" height="26" rx="6" class="b"/><rect x="206" y="94" width="56" height="26" rx="6" class="c"/><rect x="282" y="94" width="56" height="26" rx="6"/>
+                      <rect x="130" y="132" width="56" height="26" rx="6" class="c"/><rect x="206" y="132" width="56" height="26" rx="6"/><rect x="282" y="132" width="56" height="26" rx="6" class="b"/>
+                      <rect x="130" y="170" width="56" height="26" rx="6"/><rect x="206" y="170" width="56" height="26" rx="6" class="c"/><rect x="282" y="170" width="56" height="26" rx="6" class="b"/>
+                    </g>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+                </div>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">04</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">05</span>
+                  <span class="badge badge-dev"><span class="dot"></span>In development</span>
+                </div>
+                <h3>SentiBench</h3>
+                <p class="demo-tagline">An evaluation harness for software-engineering sentiment.</p>
+                <p>Benchmarks lexicon-based, SE-specific and LLM sentiment classifiers side by side on software-engineering datasets, with the same splits and metrics for each, so choosing a model is a measured decision.</p>
+                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Recognition tools × Cross-phase: <strong>10 studies, fragmented</strong></span></p>
+                <ul class="tags"><li>LLM vs baselines</li><li>Shared splits &amp; metrics</li><li>Reproducible runs</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+                </div>
               </div>
-              <h3>ReleasePulse</h3>
-              <p class="demo-tagline">App reviews and tickets → emotion by release and feature.</p>
-              <p>Turns user feedback into prioritisation evidence for each release and feature, and can feed new requirements into the ElicitSense register.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Decision-making bias × Requirements: <strong>1 study</strong></span></p>
-              <ul class="tags"><li>Aspect-based sentiment</li><li>Release-level aggregation</li><li>Feeds ElicitSense</li></ul>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
-              </div>
-            </div>
-          </article>
+            </article>
 
-          <!-- DEMO 5 · SprintWeather -->
-          <article class="demo spotlight reveal" id="demo-sprintweather">
-            <div class="demo-media">
-              <div class="demo-placeholder">
-                <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                  <g class="mock-weather">
-                    <g transform="translate(92 92)"><circle r="20"/><path d="M0-34v-8M0 34v8M-34 0h-8M34 0h8M-24-24l-6-6M24 24l6 6M-24 24l-6 6M24-24l6-6"/></g>
-                    <g transform="translate(200 92)"><path d="M-30 14h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 14z"/></g>
-                    <g transform="translate(308 86)"><path d="M-30 8h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 8z"/><path d="M-14 22l-6 12M2 22l-6 12M18 22l-6 12"/></g>
-                  </g>
-                  <rect class="mock-line" x="68" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="176" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="284" y="150" width="48" height="6" rx="3"/>
-                  <rect class="mock-ok" x="150" y="178" width="100" height="22" rx="11"/>
-                </svg>
-                <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+            <!-- PROJECT · PR Tone Coach -->
+            <article class="demo spotlight reveal" id="demo-pr-tone-coach">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <rect class="mock-card" x="40" y="30" width="320" height="64" rx="10"/>
+                    <circle class="mock-chip" cx="64" cy="54" r="10"/><rect class="mock-line" x="84" y="50" width="150" height="6" rx="3"/>
+                    <rect class="mock-strike" x="56" y="74" width="230" height="6" rx="3"/><line class="mock-strike-line" x1="52" y1="77" x2="292" y2="77"/>
+                    <rect class="mock-warn" x="300" y="44" width="46" height="16" rx="8"/>
+                    <path class="mock-arrow" d="M200 104v18m-6-6 6 6 6-6"/>
+                    <rect class="mock-card is-ok" x="40" y="132" width="320" height="64" rx="10"/>
+                    <circle class="mock-chip" cx="64" cy="156" r="10"/><rect class="mock-line" x="84" y="152" width="190" height="6" rx="3"/><rect class="mock-line faint" x="56" y="176" width="250" height="6" rx="3"/>
+                    <rect class="mock-ok" x="300" y="146" width="46" height="16" rx="8"/>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+                </div>
               </div>
-            </div>
-            <div class="demo-body">
-              <div class="demo-meta">
-                <span class="demo-num">05</span>
-                <span class="badge badge-dev"><span class="dot"></span>In development</span>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">06</span>
+                  <span class="badge badge-dev"><span class="dot"></span>In development</span>
+                </div>
+                <h3>PR Tone Coach</h3>
+                <p class="demo-tagline">Check a code-review comment before you send it.</p>
+                <p>Identifies whether a comment targets the person, the code or the tooling, estimates the risk of pushback, and suggests a rewrite.</p>
+                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Design &amp; implementation: <strong>0 studies</strong></span></p>
+                <ul class="tags"><li>LLM classification</li><li>Risk scoring</li><li>Guided rewriting</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+                </div>
               </div>
-              <h3>SprintWeather</h3>
-              <p class="demo-tagline">An opt-in team pulse for retrospectives.</p>
-              <p>Self-reported and k-anonymous by design: it shows how the team is doing without ever scoring an individual.</p>
-              <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Team health × Maintenance: <strong>0 studies</strong>, no interventions</span></p>
-              <ul class="tags"><li>k-anonymity</li><li>Opt-in by design</li><li>Team-level aggregates</li></ul>
-              <div class="demo-links">
-                <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
-                <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+            </article>
+
+            <!-- PROJECT · ReleasePulse -->
+            <article class="demo spotlight reveal" id="demo-releasepulse">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <line class="mock-axis" x1="48" y1="180" x2="360" y2="180"/>
+                    <g class="mock-cols">
+                      <rect x="64" y="120" width="26" height="60" rx="4"/><rect x="124" y="96" width="26" height="84" rx="4"/><rect x="184" y="134" width="26" height="46" rx="4"/><rect x="244" y="74" width="26" height="106" rx="4"/><rect x="304" y="104" width="26" height="76" rx="4"/>
+                    </g>
+                    <path class="mock-trend" d="M77 102 C110 70, 130 84, 137 80 S180 128, 197 116 S240 50, 257 56 S300 92, 317 86"/>
+                    <g class="mock-dots"><circle cx="77" cy="102" r="4"/><circle cx="137" cy="80" r="4"/><circle cx="197" cy="116" r="4"/><circle cx="257" cy="56" r="4"/><circle cx="317" cy="86" r="4"/></g>
+                    <g class="mock-ticks"><rect x="66" y="190" width="22" height="5" rx="2.5"/><rect x="126" y="190" width="22" height="5" rx="2.5"/><rect x="186" y="190" width="22" height="5" rx="2.5"/><rect x="246" y="190" width="22" height="5" rx="2.5"/><rect x="306" y="190" width="22" height="5" rx="2.5"/></g>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+                </div>
               </div>
-            </div>
-          </article>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">07</span>
+                  <span class="badge badge-dev"><span class="dot"></span>In development</span>
+                </div>
+                <h3>ReleasePulse</h3>
+                <p class="demo-tagline">App reviews and tickets → emotion by release and feature.</p>
+                <p>Turns user feedback into prioritisation evidence for each release and feature, and can feed new requirements into the ElicitSense register.</p>
+                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Decision-making bias × Requirements: <strong>1 study</strong></span></p>
+                <ul class="tags"><li>Aspect-based sentiment</li><li>Release-level aggregation</li><li>Feeds ElicitSense</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PROJECT · SprintWeather -->
+            <article class="demo spotlight reveal" id="demo-sprintweather">
+              <div class="demo-media">
+                <div class="demo-placeholder">
+                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
+                    <g class="mock-weather">
+                      <g transform="translate(92 92)"><circle r="20"/><path d="M0-34v-8M0 34v8M-34 0h-8M34 0h8M-24-24l-6-6M24 24l6 6M-24 24l-6 6M24-24l6-6"/></g>
+                      <g transform="translate(200 92)"><path d="M-30 14h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 14z"/></g>
+                      <g transform="translate(308 86)"><path d="M-30 8h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 8z"/><path d="M-14 22l-6 12M2 22l-6 12M18 22l-6 12"/></g>
+                    </g>
+                    <rect class="mock-line" x="68" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="176" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="284" y="150" width="48" height="6" rx="3"/>
+                    <rect class="mock-ok" x="150" y="178" width="100" height="22" rx="11"/>
+                  </svg>
+                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+                </div>
+              </div>
+              <div class="demo-body">
+                <div class="demo-meta">
+                  <span class="demo-num">08</span>
+                  <span class="badge badge-dev"><span class="dot"></span>In development</span>
+                </div>
+                <h3>SprintWeather</h3>
+                <p class="demo-tagline">An opt-in team pulse for retrospectives.</p>
+                <p>Self-reported and k-anonymous by design: it shows how the team is doing without ever scoring an individual.</p>
+                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Team health × Maintenance: <strong>0 studies</strong>, no interventions</span></p>
+                <ul class="tags"><li>k-anonymity</li><li>Opt-in by design</li><li>Team-level aggregates</li></ul>
+                <div class="demo-links">
+                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -681,7 +767,7 @@
               <h3>Emotions in Software Engineering: A Systematic Mapping Study</h3>
               <p class="authors"><strong>Ben Cheng</strong>, Yi Wang, Chetan Arora, Thuong Hoang, Xiao Liu</p>
               <p class="venue">Automated Software Engineering (Springer) <span class="badge badge-muted">Under review</span></p>
-              <p class="pub-note">Classifies 57 primary studies by lifecycle phase × emotional impact. It's the research map behind the five projects above.</p>
+              <p class="pub-note">Classifies 57 primary studies by lifecycle phase × emotional impact. It's the research map behind the in-development projects above.</p>
             </div>
           </li>
           <li class="pub reveal">
@@ -761,6 +847,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=8" defer></script>
+  <script src="assets/js/main.js?v=9" defer></script>
 </body>
 </html>

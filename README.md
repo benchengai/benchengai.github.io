@@ -18,9 +18,13 @@ cd personal-website && python3 -m http.server 8765
 
 然后打开 http://localhost:8765
 
-## 填充 5 个 demo
+## 项目（Projects）区
 
-在 `index.html` 里搜索 `DEMO 1` … `DEMO 5`，每个 demo 改三处：
+项目分两组：**Released**（已公开代码）和 **In development**（在做的）。在 `index.html` 里搜索 `PROJECT ·` 可以找到每张卡片。
+
+**加一个新项目**：复制任意一个 `<article class="demo …">…</article>` 整块，粘到对应分组的 `demo-grid` 里，改标题、描述、标签和链接。卡片加上 `demo--flagship` 会占满整行（每组最好只有一张）。编号 `demo-num` 按顺序改一下即可。
+
+**完成一个在做的 demo**：
 
 1. **画面**：把 `<div class="demo-placeholder">…</div>` 整块换成截图或短视频（建议 16:9，视频不超过 10 MB）：
    ```html
@@ -29,9 +33,11 @@ cd personal-website && python3 -m http.server 8765
    <video src="assets/demos/elicitsense.mp4" poster="assets/demos/elicitsense.jpg" autoplay muted loop playsinline></video>
    ```
 2. **链接**：把 `href=""` 填上网址。`href` 为空的按钮会自动显示成灰色的 “Soon”，填了就自动变成可点击（外链会在新标签页打开）。
-3. **状态**：把 `In development` 改成 `Live`，并把 `badge-dev` 改成 `badge-live`（绿色）。
+3. **状态**：把 `In development` 改成 `Released`，`badge-dev` 改成 `badge-live`（绿色），再把整张卡片移到 Released 组。
 
-ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/README.md` 的 Results 表。评测集扩大（比如加了真人录音或新项目）后，记得同步更新这里的数字和下面那句说明。
+EmoRE 卡片的截图直接引用 GitHub 仓库 REDocDemo2026 里的 `report.png`。如果改了仓库里的文件名或把仓库设为私有，这张图会失效。
+
+ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/README.md` 的 Results 表。评测集扩大后，记得同步更新这里的数字和下面那句说明。
 
 ## JSS 论文上线后
 
@@ -54,7 +60,7 @@ ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/
    ```
 3. 仓库 Settings → Pages → Source 选 `main` 分支，几分钟后网址就是 `https://你的用户名.github.io`。
 
-改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=8`、`main.js?v=8` 的数字加 1，避免访客浏览器用旧缓存。
+改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=9`、`main.js?v=9` 的数字加 1，避免访客浏览器用旧缓存。
 
 ## 加回 CV 下载
 
