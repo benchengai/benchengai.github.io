@@ -1,0 +1,26 @@
+2:"$Sreact.fragment"
+3:"/demos/sprintweather/_next/static/chunks/27gjg8e11zukd.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:"/demos/sprintweather/_next/static/chunks/41nfp8us2mbat.js"
+b:I[88717,["$3","$a"],"CheckinForm"]
+c:I[97367,["$3"],"OutletBoundary"]
+d:"$Sreact.suspense"
+10:"ViewportBoundary"
+11:I[97367,["$3"],"$10"]
+12:"MetadataBoundary"
+13:I[97367,["$3"],"$12"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","h1",null,{"children":"Sprint check-in"}],["$","p",null,{"className":"lede","children":["Optional, and about a minute. Your answers are stored without your name, your code or the time, and nobody can see them on their own: only team aggregates of at least k = ",5," responses are ever shown."]}],["$","$Lb",null,{"demo":true,"sprintLabel":null,"dimensions":[{"id":"subteam","label":"Sub-team","values":["Payments","Platform"]},{"id":"role","label":"Role","values":["Developer","QA","Design","Product"]}],"k":5,"noteMax":500}]],[["$","script","script-0",{"src":"/demos/sprintweather/_next/static/chunks/41nfp8us2mbat.js","async":true}]],["$","$Lc",null,{"children":["$","$d",null,{"name":"Next.MetadataOutlet","children":"$@e"}]}]]}],"p":"$@f","v":null,"s":"$8"}}]]
+1:[["children",{"s":"checkin","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L11",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L13",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$d",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"SprintWeather"}],["$","meta","1",{"name":"description","content":"An opt-in, self-reported, k-anonymous team pulse for sprint retrospectives."}]]}]}],null]}],null]}],"p":"$@14","v":null,"s":"$8"}},"a":"$@15","u":"$@16","b":"_BMXXlN65bahQ8_uF0BO1"}
+e:null
+16:true
+8:300
+8:C
+15:0
+6:"$undefined"
+14:"$undefined"
+f:"$undefined"

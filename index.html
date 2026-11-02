@@ -370,19 +370,9 @@
 
             <!-- PROJECT · SentiBench -->
             <article class="demo spotlight reveal" id="demo-sentibench">
-              <div class="demo-media">
-                <div class="demo-placeholder">
-                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                    <g class="mock-head"><rect x="130" y="34" width="56" height="8" rx="4"/><rect x="206" y="34" width="56" height="8" rx="4"/><rect x="282" y="34" width="56" height="8" rx="4"/></g>
-                    <g class="mock-rowlabels"><rect x="48" y="66" width="56" height="7" rx="3.5"/><rect x="48" y="104" width="44" height="7" rx="3.5"/><rect x="48" y="142" width="62" height="7" rx="3.5"/><rect x="48" y="180" width="50" height="7" rx="3.5"/></g>
-                    <g class="mock-cells">
-                      <rect x="130" y="56" width="56" height="26" rx="6"/><rect x="206" y="56" width="56" height="26" rx="6" class="b"/><rect x="282" y="56" width="56" height="26" rx="6" class="c"/>
-                      <rect x="130" y="94" width="56" height="26" rx="6" class="b"/><rect x="206" y="94" width="56" height="26" rx="6" class="c"/><rect x="282" y="94" width="56" height="26" rx="6"/>
-                      <rect x="130" y="132" width="56" height="26" rx="6" class="c"/><rect x="206" y="132" width="56" height="26" rx="6"/><rect x="282" y="132" width="56" height="26" rx="6" class="b"/>
-                      <rect x="130" y="170" width="56" height="26" rx="6"/><rect x="206" y="170" width="56" height="26" rx="6" class="c"/><rect x="282" y="170" width="56" height="26" rx="6" class="b"/>
-                    </g>
-                  </svg>
-                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="assets/demos/sentibench.png" alt="SentiBench: macro-F1 with 95% bootstrap intervals for twelve sentiment classifiers on the GitHub, Jira and Stack Overflow gold sets" width="800" height="450" loading="lazy">
                 </div>
               </div>
               <div class="demo-body">
@@ -392,11 +382,11 @@
                 </div>
                 <h3>SentiBench</h3>
                 <p class="demo-tagline">An evaluation harness for software-engineering sentiment.</p>
-                <p>Benchmarks lexicon-based, SE-specific and LLM sentiment classifiers side by side on software-engineering datasets, with the same splits and metrics for each, so choosing a model is a measured decision.</p>
-                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Recognition tools × Cross-phase: <strong>10 studies, fragmented</strong></span></p>
-                <ul class="tags"><li>LLM vs baselines</li><li>Shared splits &amp; metrics</li><li>Reproducible runs</li></ul>
+                <p>Twelve classifier setups on three published SE gold sets (GitHub, Jira, Stack Overflow; 17,413 items): VADER, RoBERTa, supervised baselines, and four LLMs prompted zero- and few-shot with strict JSON output. Same stratified test sample for each, bootstrap intervals, cross-platform transfer, cost per 1,000 items and an error browser.</p>
+                <p class="demo-gap"><span class="gap-label">Result</span><span class="gap-value">embeddings + logistic regression matches the best LLM (macro-F1 <strong>0.83</strong> vs 0.82) at about <strong>1/800</strong> of the cost</span></p>
+                <ul class="tags"><li>LLM evaluation</li><li>Bootstrap CIs</li><li>Embeddings</li><li>Ollama</li><li>Cached, resumable runs</li><li>Next.js</li></ul>
                 <div class="demo-links">
-                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-primary" data-demo-link href="demos/sentibench/"><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                   <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
                 </div>
               </div>
@@ -452,18 +442,9 @@
 
             <!-- PROJECT · SprintWeather -->
             <article class="demo spotlight reveal" id="demo-sprintweather">
-              <div class="demo-media">
-                <div class="demo-placeholder">
-                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                    <g class="mock-weather">
-                      <g transform="translate(92 92)"><circle r="20"/><path d="M0-34v-8M0 34v8M-34 0h-8M34 0h8M-24-24l-6-6M24 24l6 6M-24 24l-6 6M24-24l6-6"/></g>
-                      <g transform="translate(200 92)"><path d="M-30 14h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 14z"/></g>
-                      <g transform="translate(308 86)"><path d="M-30 8h56a16 16 0 0 0 0-32 24 24 0 0 0-46 6A14 14 0 0 0-30 8z"/><path d="M-14 22l-6 12M2 22l-6 12M18 22l-6 12"/></g>
-                    </g>
-                    <rect class="mock-line" x="68" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="176" y="150" width="48" height="6" rx="3"/><rect class="mock-line" x="284" y="150" width="48" height="6" rx="3"/>
-                    <rect class="mock-ok" x="150" y="178" width="100" height="22" rx="11"/>
-                  </svg>
-                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="assets/demos/sprintweather.png" alt="SprintWeather retro view: team-level energy, workload and goal clarity for a sprint, each from at least five responses, and themes backed by at least five notes" width="800" height="450" loading="lazy">
                 </div>
               </div>
               <div class="demo-body">
@@ -473,11 +454,11 @@
                 </div>
                 <h3>SprintWeather</h3>
                 <p class="demo-tagline">An opt-in team pulse for retrospectives.</p>
-                <p>Self-reported and k-anonymous by design: it shows how the team is doing without ever scoring an individual.</p>
-                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Team health × Maintenance: <strong>0 studies</strong>, no interventions</span></p>
-                <ul class="tags"><li>k-anonymity</li><li>Opt-in by design</li><li>Team-level aggregates</li></ul>
+                <p>Team members check in each sprint; figures appear only from at least k = 5 responses, filters cannot be combined to single anyone out, and free-text notes are shown only as paraphrased themes backed by k or more notes. Self-report, not AI emotion inference, and never a per-person score.</p>
+                <p class="demo-gap"><span class="gap-label">Result</span><span class="gap-value">~1,400 randomised privacy tests pass, including differencing attacks; <strong>17 of 18</strong> planted themes recovered on the dev set, <strong>0</strong> phrases leaked</span></p>
+                <ul class="tags"><li>k-anonymity</li><li>Differencing defence</li><li>Property-based tests</li><li>LLM themes</li><li>Next.js</li></ul>
                 <div class="demo-links">
-                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-primary" data-demo-link href="demos/sprintweather/"><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                   <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
                 </div>
               </div>
