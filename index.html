@@ -318,24 +318,9 @@
           <div class="demo-grid">
             <!-- PROJECT · ElicitSense (flagship) -->
             <article class="demo demo--flagship spotlight reveal" id="demo-elicitsense">
-              <div class="demo-media">
-                <div class="demo-placeholder">
-                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                    <g class="mock-bars">
-                      <rect x="24" y="30" width="4" height="22" rx="2"/><rect x="32" y="24" width="4" height="34" rx="2"/><rect x="40" y="34" width="4" height="14" rx="2"/><rect x="48" y="20" width="4" height="42" rx="2"/><rect x="56" y="28" width="4" height="26" rx="2"/><rect x="64" y="36" width="4" height="10" rx="2"/><rect x="72" y="26" width="4" height="30" rx="2"/><rect x="80" y="32" width="4" height="18" rx="2"/><rect x="88" y="39" width="4" height="4" rx="2"/><rect x="96" y="39" width="4" height="4" rx="2"/><rect x="104" y="30" width="4" height="22" rx="2"/><rect x="112" y="22" width="4" height="38" rx="2"/><rect x="120" y="30" width="4" height="22" rx="2"/><rect x="128" y="35" width="4" height="12" rx="2"/>
-                    </g>
-                    <rect class="mock-line" x="148" y="34" width="120" height="6" rx="3"/><rect class="mock-line faint" x="276" y="34" width="70" height="6" rx="3"/>
-                    <g transform="translate(24 76)">
-                      <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="180" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
-                    </g>
-                    <g transform="translate(24 122)">
-                      <rect class="mock-card is-flag" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="150" height="6" rx="3"/><rect class="mock-warn" x="282" y="12" width="58" height="14" rx="7"/>
-                    </g>
-                    <g transform="translate(24 168)">
-                      <rect class="mock-card" width="352" height="38" rx="8"/><rect class="mock-chip" x="12" y="12" width="44" height="14" rx="7"/><rect class="mock-line" x="66" y="16" width="200" height="6" rx="3"/><rect class="mock-ok" x="300" y="12" width="40" height="14" rx="7"/>
-                    </g>
-                  </svg>
-                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Demo video coming soon</span>
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="assets/demos/elicitsense.png" alt="ElicitSense register: a requirement flagged as needing confirmation, with the hesitation cues listed and its quote playing in the synced transcript" width="800" height="450" loading="lazy">
                 </div>
               </div>
               <div class="demo-body">
@@ -346,13 +331,13 @@
                 </div>
                 <h3>ElicitSense</h3>
                 <p class="demo-tagline">Meeting recordings → an evidence-linked requirements register.</p>
-                <p>A Python pipeline that transcribes locally, extracts typed requirements with Claude or GPT under one shared schema, and keeps only the items whose quote matches the transcript. Hesitant answers are flagged for follow-up, and a cross-meeting register tracks refinements, conflicts and superseded items.</p>
-                <p class="demo-gap"><span class="gap-label">Status</span><span class="gap-value">CLI pipeline and register done · <strong>web UI next</strong></span></p>
+                <p>Transcribes on device, extracts typed requirements under one strict schema (GPT, Claude or a local model), and keeps only items whose quote matches the transcript. Hesitant answers are flagged for follow-up, a cross-meeting register tracks refinements, conflicts and superseded items, and a tool-using agent answers questions with checked citations. Every model is benchmarked on a held-out project for quality, cost and latency.</p>
+                <p class="demo-gap"><span class="gap-label">Live demo</span><span class="gap-value">click any quote to hear that moment of the meeting · <strong>no API key needed</strong></span></p>
                 <ul class="tags">
-                  <li>Python</li><li>faster-whisper</li><li>Claude API</li><li>OpenAI API</li><li>Pydantic</li><li>pytest</li>
+                  <li>Python</li><li>faster-whisper</li><li>OpenAI API</li><li>Claude API</li><li>Ollama</li><li>Tool-using agent</li><li>Hybrid RAG</li><li>Next.js</li><li>pytest</li>
                 </ul>
                 <div class="demo-links">
-                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-primary" data-demo-link href="demos/elicitsense/"><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                   <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
                 </div>
               </div>
@@ -364,20 +349,21 @@
                   <ol class="pipeline">
                     <li><span class="pl-step">Transcribe</span><span class="pl-note">faster-whisper, on device, word timestamps</span></li>
                     <li><span class="pl-step">Detect cues</span><span class="pl-note">hedges, filled and long pauses, slow speech</span></li>
-                    <li><span class="pl-step">Extract</span><span class="pl-note">Claude or GPT, structured output</span></li>
+                    <li><span class="pl-step">Extract</span><span class="pl-note">GPT, Claude or local model, strict schema</span></li>
                     <li><span class="pl-step">Verify</span><span class="pl-note">quote must match its cited segment</span></li>
                     <li><span class="pl-step">Merge</span><span class="pl-note">LLM proposes links, code applies status</span></li>
+                    <li><span class="pl-step">Ask</span><span class="pl-note">agent with tools, every quote checked</span></li>
                   </ol>
                 </div>
                 <div class="deep-block">
-                  <p class="deep-title">Evaluation vs gold labels</p>
+                  <p class="deep-title">Evaluation, held-out project, 3 runs per model</p>
                   <dl class="evals">
-                    <div><dt>Requirement recall</dt><dd>19<small>/19</small></dd></div>
-                    <div><dt>Quotes verified</dt><dd>30<small>/30</small></dd></div>
-                    <div><dt>Uncertainty flags P&nbsp;/&nbsp;R</dt><dd>1.00<small> / 1.00</small></dd></div>
-                    <div><dt>Register relation precision</dt><dd>0.80<small>–0.90</small></dd></div>
+                    <div><dt>Quotes verified</dt><dd>100<small>%</small></dd></div>
+                    <div><dt>Cross-meeting changes found (gpt-6.1-sol)</dt><dd>0.86</dd></div>
+                    <div><dt>Q&amp;A correct, cheapest model</dt><dd>0.94<small> at $0.001/question</small></dd></div>
+                    <div><dt>Routing cheap extract + strong merge</dt><dd>&minus;59<small>% cost</small></dd></div>
                   </dl>
-                  <p class="deep-note">Smoke test on three synthetic meetings, not a benchmark. Role-played recordings and a held-out project come next.</p>
+                  <p class="deep-note">Two small synthetic projects; the held-out one was written before any model ran on it. A smoke test, not a benchmark.</p>
                 </div>
               </div>
             </article>

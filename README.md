@@ -7,6 +7,7 @@ index.html              全部内容
 assets/css/style.css    样式（深色/浅色主题的颜色都在文件顶部的变量里）
 assets/js/main.js       动画与交互
 assets/demos/           放 demo 截图或视频
+demos/                  各应用的静态 demo 构建（见下文）
 assets/img/favicon.svg  网站图标
 ```
 
@@ -37,7 +38,19 @@ cd personal-website && python3 -m http.server 8765
 
 EmoRE 卡片的截图直接引用 GitHub 仓库 REDocDemo2026 里的 `report.png`。如果改了仓库里的文件名或把仓库设为私有，这张图会失效。
 
-ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/README.md` 的 Results 表。评测集扩大后，记得同步更新这里的数字和下面那句说明。
+ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/docs/eval/README.md`（留出项目、每个模型 3 次运行）。评测更新后，记得同步这里的数字和下面那句说明。
+
+## 托管的 demo（demos/）
+
+`demos/<app>/` 里是各个应用的静态构建，随网站一起发布在 GitHub Pages 上（例如 `demos/elicitsense/`）。不要手改这些文件，从应用仓库重新构建再复制：
+
+```bash
+cd ../elicitsense/web
+DEMO_BASE_PATH=/demos/elicitsense npm run build
+rsync -a --delete out/ ../../personal-website/demos/elicitsense/
+```
+
+卡片截图放在 `assets/demos/`。
 
 ## JSS 论文上线后
 
