@@ -50,7 +50,7 @@ DEMO_BASE_PATH=/demos/elicitsense npm run build
 rsync -a --delete out/ ../../personal-website/demos/elicitsense/
 ```
 
-卡片截图放在 `assets/demos/`。
+其他应用同理：在各自仓库的 `web/` 里用 `DEMO_BASE_PATH=/demos/<app>` 构建，再复制到 `demos/<app>/`（目前有 elicitsense、pr-tone-coach、releasepulse）。卡片截图放在 `assets/demos/`。
 
 ## JSS 论文上线后
 

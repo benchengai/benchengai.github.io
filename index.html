@@ -404,19 +404,9 @@
 
             <!-- PROJECT · PR Tone Coach -->
             <article class="demo spotlight reveal" id="demo-pr-tone-coach">
-              <div class="demo-media">
-                <div class="demo-placeholder">
-                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                    <rect class="mock-card" x="40" y="30" width="320" height="64" rx="10"/>
-                    <circle class="mock-chip" cx="64" cy="54" r="10"/><rect class="mock-line" x="84" y="50" width="150" height="6" rx="3"/>
-                    <rect class="mock-strike" x="56" y="74" width="230" height="6" rx="3"/><line class="mock-strike-line" x1="52" y1="77" x2="292" y2="77"/>
-                    <rect class="mock-warn" x="300" y="44" width="46" height="16" rx="8"/>
-                    <path class="mock-arrow" d="M200 104v18m-6-6 6 6 6-6"/>
-                    <rect class="mock-card is-ok" x="40" y="132" width="320" height="64" rx="10"/>
-                    <circle class="mock-chip" cx="64" cy="156" r="10"/><rect class="mock-line" x="84" y="152" width="190" height="6" rx="3"/><rect class="mock-line faint" x="56" y="176" width="250" height="6" rx="3"/>
-                    <rect class="mock-ok" x="300" y="146" width="46" height="16" rx="8"/>
-                  </svg>
-                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="assets/demos/pr-tone-coach.png" alt="PR Tone Coach: a draft review comment rated high risk and aimed at the person, the phrase behind it highlighted, and a rewrite that keeps the technical point" width="800" height="450" loading="lazy">
                 </div>
               </div>
               <div class="demo-body">
@@ -426,11 +416,11 @@
                 </div>
                 <h3>PR Tone Coach</h3>
                 <p class="demo-tagline">Check a code-review comment before you send it.</p>
-                <p>Identifies whether a comment targets the person, the code or the tooling, estimates the risk of pushback, and suggests a rewrite.</p>
-                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Communication × Design &amp; implementation: <strong>0 studies</strong></span></p>
-                <ul class="tags"><li>LLM classification</li><li>Risk scoring</li><li>Guided rewriting</li></ul>
+                <p>Checks your own draft before you post it: who the criticism targets (code, person, tool or process), the exact phrases that raise the risk of pushback, each verified in the draft, and a rewrite. A deterministic check makes sure every identifier, number and path survives the rewrite.</p>
+                <p class="demo-gap"><span class="gap-label">Result</span><span class="gap-value">F1 <strong>0.87</strong> against human toxicity labels (ToxiSpanSE) at <strong>$0.00015</strong> per comment; research gap: Communication × Design, 0 studies</span></p>
+                <ul class="tags"><li>LLM classification</li><li>Verified evidence</li><li>Guided rewriting</li><li>LLM judge</li><li>Next.js</li></ul>
                 <div class="demo-links">
-                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-primary" data-demo-link href="demos/pr-tone-coach/"><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                   <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
                 </div>
               </div>
@@ -438,18 +428,9 @@
 
             <!-- PROJECT · ReleasePulse -->
             <article class="demo spotlight reveal" id="demo-releasepulse">
-              <div class="demo-media">
-                <div class="demo-placeholder">
-                  <svg class="mock" viewBox="0 0 400 225" aria-hidden="true">
-                    <line class="mock-axis" x1="48" y1="180" x2="360" y2="180"/>
-                    <g class="mock-cols">
-                      <rect x="64" y="120" width="26" height="60" rx="4"/><rect x="124" y="96" width="26" height="84" rx="4"/><rect x="184" y="134" width="26" height="46" rx="4"/><rect x="244" y="74" width="26" height="106" rx="4"/><rect x="304" y="104" width="26" height="76" rx="4"/>
-                    </g>
-                    <path class="mock-trend" d="M77 102 C110 70, 130 84, 137 80 S180 128, 197 116 S240 50, 257 56 S300 92, 317 86"/>
-                    <g class="mock-dots"><circle cx="77" cy="102" r="4"/><circle cx="137" cy="80" r="4"/><circle cx="197" cy="116" r="4"/><circle cx="257" cy="56" r="4"/><circle cx="317" cy="86" r="4"/></g>
-                    <g class="mock-ticks"><rect x="66" y="190" width="22" height="5" rx="2.5"/><rect x="126" y="190" width="22" height="5" rx="2.5"/><rect x="186" y="190" width="22" height="5" rx="2.5"/><rect x="246" y="190" width="22" height="5" rx="2.5"/><rect x="306" y="190" width="22" height="5" rx="2.5"/></g>
-                  </svg>
-                  <span class="ph-label"><svg class="i"><use href="#i-play"/></svg>Coming soon</span>
+              <div class="demo-media demo-media--shot">
+                <div class="shot-frame">
+                  <img src="assets/demos/releasepulse.png" alt="ReleasePulse: a prioritisation table with complaint rates and 95% intervals per feature, and a regression flagged after release 3.4" width="800" height="450" loading="lazy">
                 </div>
               </div>
               <div class="demo-body">
@@ -458,12 +439,12 @@
                   <span class="badge badge-dev"><span class="dot"></span>In development</span>
                 </div>
                 <h3>ReleasePulse</h3>
-                <p class="demo-tagline">App reviews and tickets → emotion by release and feature.</p>
-                <p>Turns user feedback into prioritisation evidence for each release and feature, and can feed new requirements into the ElicitSense register.</p>
-                <p class="demo-gap"><span class="gap-label">Research gap</span><span class="gap-value">Decision-making bias × Requirements: <strong>1 study</strong></span></p>
-                <ul class="tags"><li>Aspect-based sentiment</li><li>Release-level aggregation</li><li>Feeds ElicitSense</li></ul>
+                <p class="demo-tagline">App reviews and tickets → per-release, per-feature evidence.</p>
+                <p>Extracts the features each review mentions with checked quotes, clusters them with embeddings, and reports complaint rates per release with 95% intervals. Regressions are flagged only when the change is significant, so volume spikes and repeated rants do not top the list. Top issues export as candidate requirements for ElicitSense.</p>
+                <p class="demo-gap"><span class="gap-label">Result</span><span class="gap-value">planted regressions found <strong>1.00 / 1.00</strong> on a held-out app, <strong>0 of 3</strong> bias traps flagged (a raw-count rule falls for 2)</span></p>
+                <ul class="tags"><li>Aspect extraction</li><li>Embeddings clustering</li><li>Wilson / Newcombe intervals</li><li>Feeds ElicitSense</li><li>Next.js</li></ul>
                 <div class="demo-links">
-                  <a class="btn btn-sm btn-primary" data-demo-link href=""><svg class="i"><use href="#i-play"/></svg>Live demo</a>
+                  <a class="btn btn-sm btn-primary" data-demo-link href="demos/releasepulse/"><svg class="i"><use href="#i-play"/></svg>Live demo</a>
                   <a class="btn btn-sm btn-outline" data-demo-link href=""><svg class="i"><use href="#i-code"/></svg>Source</a>
                 </div>
               </div>
