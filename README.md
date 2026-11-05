@@ -21,36 +21,17 @@ cd personal-website && python3 -m http.server 8765
 
 ## 项目（Projects）区
 
-项目分两组：**Released**（已公开代码）和 **In development**（在做的）。在 `index.html` 里搜索 `PROJECT ·` 可以找到每张卡片。
+项目分两组：**Live demos**（可以在浏览器里直接试用，静态页面放在 `demos/` 下）和 **More projects**（代码在 GitHub）。在 `index.html` 里搜索 `PROJECT ·` 可以找到每张卡片。
 
-**加一个新项目**：复制任意一个 `<article class="demo …">…</article>` 整块，粘到对应分组的 `demo-grid` 里，改标题、描述、标签和链接。卡片加上 `demo--flagship` 会占满整行（每组最好只有一张）。编号 `demo-num` 按顺序改一下即可。
+**加一个新项目**：复制任意一个 `<article class="demo …">…</article>` 整块，粘到对应分组的 `demo-grid` 里，改标题、描述、标签和链接，再把编号 `demo-num` 按顺序改一下。卡片加上 `demo--flagship` 会占满整行（每组最好只有一张）。
 
-**完成一个在做的 demo**：
-
-1. **画面**：把 `<div class="demo-placeholder">…</div>` 整块换成截图或短视频（建议 16:9，视频不超过 10 MB）：
-   ```html
-   <img src="assets/demos/elicitsense.png" alt="ElicitSense requirements register">
-   <!-- 或 -->
-   <video src="assets/demos/elicitsense.mp4" poster="assets/demos/elicitsense.jpg" autoplay muted loop playsinline></video>
-   ```
-2. **链接**：把 `href=""` 填上网址。`href` 为空的按钮会自动显示成灰色的 “Soon”，填了就自动变成可点击（外链会在新标签页打开）。
-3. **状态**：把 `In development` 改成 `Released`，`badge-dev` 改成 `badge-live`（绿色），再把整张卡片移到 Released 组。
+- **画面**：截图放到 `assets/demos/`，用 `<div class="shot-frame"><img …></div>` 包起来（参考 ElicitSense 卡片）。还没有截图时保留 `demo-placeholder` 示意图。
+- **链接**：`href=""` 为空的按钮会自动显示成灰色的 “Soon”，填了网址就变成可点击（外链在新标签页打开）。
+- **状态**：在线 demo 用 `badge-live` 的 “Live demo”，只有代码的用 “Released”。
 
 EmoRE 卡片的截图直接引用 GitHub 仓库 REDocDemo2026 里的 `report.png`。如果改了仓库里的文件名或把仓库设为私有，这张图会失效。
 
-ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 `elicitsense/docs/eval/README.md`（留出项目、每个模型 3 次运行）。评测更新后，记得同步这里的数字和下面那句说明。
-
-## 托管的 demo（demos/）
-
-`demos/<app>/` 里是各个应用的静态构建，随网站一起发布在 GitHub Pages 上（例如 `demos/elicitsense/`）。不要手改这些文件，从应用仓库重新构建再复制：
-
-```bash
-cd ../elicitsense/web
-DEMO_BASE_PATH=/demos/elicitsense npm run build
-rsync -a --delete out/ ../../personal-website/demos/elicitsense/
-```
-
-其他应用同理：在各自仓库的 `web/` 里用 `DEMO_BASE_PATH=/demos/<app>` 构建，再复制到 `demos/<app>/`（目前有 elicitsense、sentibench、pr-tone-coach、releasepulse、sprintweather；SprintWeather 用 `SW_MODE=demo DEMO_BASE_PATH=/demos/sprintweather npm run build:demo`）。卡片截图放在 `assets/demos/`。
+ElicitSense 卡片下方的 **Pipeline / Evaluation** 数字来自 elicitsense 仓库 README 的 Results 部分，Experience 里 ElicitSense 那条也引用了同样的数字。评测更新后两处一起改。
 
 ## JSS 论文上线后
 
@@ -73,7 +54,7 @@ rsync -a --delete out/ ../../personal-website/demos/elicitsense/
    ```
 3. 仓库 Settings → Pages → Source 选 `main` 分支，几分钟后网址就是 `https://你的用户名.github.io`。
 
-改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=9`、`main.js?v=9` 的数字加 1，避免访客浏览器用旧缓存。
+改了 CSS/JS 之后，把 `index.html` 里 `style.css?v=10`、`main.js?v=10` 的数字加 1，避免访客浏览器用旧缓存。
 
 ## 加回 CV 下载
 
